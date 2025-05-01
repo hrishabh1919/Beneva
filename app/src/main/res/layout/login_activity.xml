@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f8e9">
+
+    <!-- Top Green Curved Background -->
+    <RelativeLayout
+        android:id="@+id/top_section"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:background="#4caf50"
+        android:clipToOutline="true">
+
+        <!-- You may use a custom drawable for the curved effect or use a vector/shape background -->
+
+        <!-- Back Arrow -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="24dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_back_white"
+            android:tint="#F1F8E9" />
+
+        <!-- App Name and Tagline -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/back_button"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="24dp">
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BENEVA"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tagline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test text here"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Status bar icons are handled by the OS, not in layout -->
+    </RelativeLayout>
+
+    <!-- White Card for Login Form -->
+    <LinearLayout
+        android:id="@+id/login_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_section"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="32dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginBottom="0dp"
+        android:elevation="8dp"
+        android:clipToOutline="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <!-- Login Title -->
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="#212121"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Email Field -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_edittext_bg"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_email"
+                android:tint="#212121" />
+
+            <EditText
+                android:id="@+id/email_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="admin@email.com"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+        </LinearLayout>
+
+        <!-- Password Field -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_edittext_bg"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_lock"
+                android:tint="#212121" />
+
+            <EditText
+                android:id="@+id/password_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="***"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:inputType="textPassword"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+        </LinearLayout>
+
+        <!-- Enter Button -->
+        <Button
+            android:id="@+id/enter_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Enter"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#4caf50"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button_bg" />
+    </LinearLayout>
+</RelativeLayout>
