@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f8e9">
+
+    <!-- Centered App Name -->
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/beneva"
+        android:textColor="#43A047"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <!-- Tagline at Bottom Center -->
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:text="@string/empowering_nconscious_choices"
+        android:textColor="#43A047"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

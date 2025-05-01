@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Beneva</string>
+    <string name="beneva">BENEVA</string>
+    <string name="empowering_nconscious_choices">Empowering\nConscious choices</string>
+    
+    <!-- Camera related -->
+    <string name="camera_permission_required">Camera permission required</string>
+    <string name="camera_error">Failed to start camera</string>
+    
+    <!-- Barcode scanning -->
+    <string name="barcode_scan_failed">Failed to scan barcode</string>
+    
+    <!-- Product info -->
+    <string name="product_not_found">Product not found</string>
+    <string name="fetch_error">Error fetching product info</string>
+    <string name="eco_score">🟢 EcoScore: %1$d</string>
+    <string name="recyclable">✅ %1$s</string>
+    <string name="allergens">⚠️ Allergens: %1$s</string>
+    <string name="no_allergens">✅ No common allergens detected</string>
+    <string name="packaging">📦 Packaging: %1$s</string>
+    <string name="brand_sustainability">🏢 Brand Sustainability: %1$s</string>
+    
+    <!-- Alternatives -->
+    <string name="alternatives_coming_soon">Alternative suggestions coming soon!</string>
+</resources>
