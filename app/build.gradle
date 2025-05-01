@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.beneva'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.beneva"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    
+    // Firebase
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.database.ktx
+    
+    // ML Kit for barcode scanning
+    implementation libs.barcode.scanning
+    implementation libs.camera
+    
+    // CameraX
+    implementation libs.androidx.camera.core
+    implementation libs.androidx.camera.camera2
+    implementation libs.androidx.camera.lifecycle
+    implementation libs.androidx.camera.view
+    
+    // Coroutines
+    implementation libs.kotlinx.coroutines.android
+    implementation libs.kotlinx.coroutines.play.services
+    implementation libs.play.services.vision.common
+
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit.v115
+    androidTestImplementation libs.androidx.espresso.core.v351
+} 
