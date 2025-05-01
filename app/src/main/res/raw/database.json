@@ -16,7 +16,12 @@
       "Dehydrated Vegetables (Onion, Garlic)",
       "Spices and Condiments (Coriander, Turmeric, Chilli, Ginger, Cardamom, Clove, Pepper, Fennel, Nutmeg, Mace)",
       "Sugar"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.72,
+    "packaging_material": "Plastic (Recyclable)",
+    "certifications": ["FSSAI"],
+    "eco_score": 45,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Nescafe Classic Instant Coffee",
@@ -24,7 +29,12 @@
     "barcode": "8901058848674",
     "ingredients": [
       "100% Pure Coffee (Blend of Arabica and Robusta Beans)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 1.12,
+    "packaging_material": "Glass Jar",
+    "certifications": ["Rainforest Alliance"],
+    "eco_score": 75,
+    "sustainability_labels": ["Ethically Sourced"]
   },
   {
     "name": "Amul Taaza Toned Milk",
@@ -34,7 +44,12 @@
       "Toned Milk",
       "Milk Solids",
       "Vitamins A and D"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 1.36,
+    "packaging_material": "Tetra Pak",
+    "certifications": ["FSSAI Organic"],
+    "eco_score": 68,
+    "sustainability_labels": ["Carbon Neutral Dairy"]
   },
   {
     "name": "Parle-G Glucose Biscuits",
@@ -51,7 +66,12 @@
       "Emulsifiers (322, 471)",
       "Dough Conditioner (223)",
       "Artificial Flavouring Substances (Vanilla)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.89,
+    "packaging_material": "Paper & Plastic",
+    "certifications": ["ISO 14001"],
+    "eco_score": 52,
+    "sustainability_labels": ["Reduced Plastic Usage"]
   },
   {
     "name": "Britannia Marie Gold Biscuits",
@@ -68,7 +88,12 @@
       "Emulsifiers (322, 471)",
       "Dough Conditioner (223)",
       "Artificial Flavouring Substances (Vanilla)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.85,
+    "packaging_material": "Paper & Plastic",
+    "certifications": ["ISO 14001"],
+    "eco_score": 50,
+    "sustainability_labels": ["Reduced Plastic Usage"]
   },
   {
     "name": "Sunfeast Dark Fantasy Choco Fills",
@@ -85,7 +110,12 @@
       "Salt",
       "Emulsifiers (322, 471)",
       "Artificial Flavouring Substances (Vanilla, Chocolate)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.95,
+    "packaging_material": "Plastic (Recyclable)",
+    "certifications": ["FSSAI"],
+    "eco_score": 48,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Cadbury Dairy Milk Chocolate",
@@ -97,7 +127,12 @@
       "Cocoa Solids",
       "Emulsifiers (442, 476)",
       "Permitted Flavours"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 1.05,
+    "packaging_material": "Plastic (Recyclable)",
+    "certifications": ["FSSAI"],
+    "eco_score": 55,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Bournvita Health Drink",
@@ -113,7 +148,12 @@
       "Vitamins",
       "Emulsifiers (471)",
       "Salt"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.85,
+    "packaging_material": "Plastic (Recyclable)",
+    "certifications": ["FSSAI"],
+    "eco_score": 50,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Nestle KitKat",
@@ -130,7 +170,12 @@
       "Yeast",
       "Raising Agents (500(ii), 503(ii))",
       "Permitted Flavouring"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.90,
+    "packaging_material": "Plastic (Recyclable)",
+    "certifications": ["FSSAI"],
+    "eco_score": 47,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Haldiram's Aloo Bhujia",
@@ -143,7 +188,12 @@
       "Spices and Condiments",
       "Salt",
       "Lemon Juice Powder"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.80,
+    "packaging_material": "Plastic (Recyclable)",
+    "certifications": ["FSSAI"],
+    "eco_score": 46,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Lay's Classic Salted Chips",
@@ -153,7 +203,12 @@
       "Potatoes",
       "Edible Vegetable Oil (Palmolein)",
       "Salt"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.75,
+    "packaging_material": "Plastic (Recyclable)",
+    "certifications": ["FSSAI"],
+    "eco_score": 44,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Kurkure Masala Munch",
@@ -169,7 +224,12 @@
       "Sugar",
       "Acidity Regulator (330)",
       "Flavour Enhancer (627, 631)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.85,
+    "packaging_material": "Plastic (Recyclable)",
+    "certifications": ["FSSAI"],
+    "eco_score": 45,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Mother Dairy Dahi",
@@ -178,7 +238,12 @@
     "ingredients": [
       "Pasteurized Milk",
       "Active Culture"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 1.20,
+    "packaging_material": "Plastic (Recyclable)",
+    "certifications": ["FSSAI Organic"],
+    "eco_score": 65,
+    "sustainability_labels": ["Carbon Neutral Dairy"]
   },
   {
     "name": "Dabur Honey",
@@ -186,7 +251,12 @@
     "barcode": "8901207001006",
     "ingredients": [
       "Honey"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.45,
+    "packaging_material": "Glass",
+    "certifications": ["FSSAI Organic"],
+    "eco_score": 88,
+    "sustainability_labels": ["Plastic-Free", "Bee-Friendly"]
   },
   {
     "name": "Tata Salt",
@@ -194,7 +264,12 @@
     "barcode": "8901702001015",
     "ingredients": [
       "Iodised Salt"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.10,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 70,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Aashirvaad Atta",
@@ -202,7 +277,12 @@
     "barcode": "8901725121102",
     "ingredients": [
       "Whole Wheat"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.50,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 60,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Fortune Sunlite Refined Sunflower Oil",
@@ -212,7 +292,12 @@
       "Refined Sunflower Oil",
       "Vitamin A",
       "Vitamin D"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.85,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 55,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Saffola Gold Oil",
@@ -223,7 +308,12 @@
       "Refined Sunflower Oil",
       "Vitamin A",
       "Vitamin D"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.90,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 54,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "MDH Deggi Mirch",
@@ -232,7 +322,12 @@
     "ingredients": [
       "Red Chilli",
       "Capsicum"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.20,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 75,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Everest Turmeric Powder",
@@ -240,7 +335,12 @@
     "barcode": "8901786000017",
     "ingredients": [
       "Turmeric"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.18,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 74,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Catch Black Pepper Powder",
@@ -248,7 +348,12 @@
     "barcode": "8901192100016",
     "ingredients": [
       "Black Pepper"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.22,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 73,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Brooke Bond Red Label Tea",
@@ -256,257 +361,265 @@
     "barcode": "8901030000018",
     "ingredients": [
       "Tea"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.32,
+    "packaging_material": "Plastic",
+    "certifications": ["Rainforest Alliance"],
+    "eco_score": 72,
+    "sustainability_labels": ["Ethically Sourced"]
   },
   {
     "name": "Tata Tea Premium",
     "brand": "Tata",
     "barcode": "8901207002003",
-    "ingredients": [
-      "Tea"
-    ]
+    "ingredients": ["Tea"],
+    "carbon_footprint_kg_co2e": 0.30,
+    "packaging_material": "Plastic",
+    "certifications": ["Rainforest Alliance"],
+    "eco_score": 71,
+    "sustainability_labels": ["Ethically Sourced"]
   },
   {
     "name": "Bru Instant Coffee",
     "brand": "Bru",
     "barcode": "8901030700015",
-    "ingredients": [
-      "Coffee",
-      "Chicory"
-    ]
+    "ingredients": ["Coffee", "Chicory"],
+    "carbon_footprint_kg_co2e": 1.05,
+    "packaging_material": "Glass Jar",
+    "certifications": ["FSSAI"],
+    "eco_score": 74,
+    "sustainability_labels": ["Ethically Sourced"]
   },
   {
     "name": "Complan Nutrition Drink",
     "brand": "Complan",
     "barcode": "8901542000018",
-    "ingredients": [
-      "Milk Solids",
-      "Sugar",
-      "Malt Extract",
-      "Edible Vegetable Oil (Palm)",
-      "Minerals",
-      "Vitamins",
-      "Cocoa Solids",
-      "Salt"
-    ]
+    "ingredients": ["Milk Solids", "Sugar", "Malt Extract", "Edible Vegetable Oil (Palm)", "Minerals", "Vitamins", "Cocoa Solids", "Salt"],
+    "carbon_footprint_kg_co2e": 0.95,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 60,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Horlicks Health Drink",
     "brand": "Horlicks",
     "barcode": "8901571000013",
-    "ingredients": [
-      "Malt Extract",
-      "Sugar",
-      "Milk Solids",
-      "Cocoa Solids",
-      "Minerals",
-      "Vitamins"
-    ]
+    "ingredients": ["Malt Extract", "Sugar", "Milk Solids", "Cocoa Solids", "Minerals", "Vitamins"],
+    "carbon_footprint_kg_co2e": 0.94,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 61,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Boost Health Drink",
     "brand": "Boost",
     "barcode": "8901571000020",
-    "ingredients": [
-      "Malt Extract",
-      "Sugar",
-      "Cocoa Solids",
-      "Milk Solids",
-      "Minerals",
-      "Vitamins"
-    ]
+    "ingredients": ["Malt Extract", "Sugar", "Cocoa Solids", "Milk Solids", "Minerals", "Vitamins"],
+    "carbon_footprint_kg_co2e": 0.93,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 62,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Bournvita Lil Champs",
     "brand": "Cadbury",
     "barcode": "8901233021422",
-    "ingredients": [
-      "Malt Extract",
-      "Sugar",
-      "Milk Solids",
-      "Cocoa Solids",
-      "Minerals",
-      "Vitamins"
-    ]
+    "ingredients": ["Malt Extract", "Sugar", "Milk Solids", "Cocoa Solids", "Minerals", "Vitamins"],
+    "carbon_footprint_kg_co2e": 0.92,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 63,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Nestle Everyday Dairy Whitener",
     "brand": "Nestle",
     "barcode": "8901058845613",
-    "ingredients": [
-      "Milk Solids",
-      "Sugar",
-      "Stabilizers (340(ii), 451(i))"
-    ]
+    "ingredients": ["Milk Solids", "Sugar", "Stabilizers (340(ii), 451(i))"],
+    "carbon_footprint_kg_co2e": 1.10,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 64,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Amul Butter",
     "brand": "Amul",
     "barcode": "8901262010026",
-    "ingredients": [
-      "Pasteurized Butter",
-      "Common Salt"
-    ]
+    "ingredients": ["Pasteurized Butter", "Common Salt"],
+    "carbon_footprint_kg_co2e": 1.30,
+    "packaging_material": "Paper",
+    "certifications": ["FSSAI"],
+    "eco_score": 65,
+    "sustainability_labels": ["Plastic-Free"]
   },
   {
     "name": "Mother Dairy Butter",
     "brand": "Mother Dairy",
     "barcode": "8904035500020",
-    "ingredients": [
-      "Pasteurized Butter",
-      "Common Salt"
-    ]
+    "ingredients": ["Pasteurized Butter", "Common Salt"],
+    "carbon_footprint_kg_co2e": 1.28,
+    "packaging_material": "Paper",
+    "certifications": ["FSSAI"],
+    "eco_score": 66,
+    "sustainability_labels": ["Plastic-Free"]
   },
   {
     "name": "Britannia Cheese Slices",
     "brand": "Britannia",
     "barcode": "8901063010705",
-    "ingredients": [
-      "Milk Solids",
-      "Emulsifiers (331, 339, 340, 452)",
-      "Common Salt",
-      "Citric Acid",
-      "Preservative (200)"
-    ]
+    "ingredients": ["Milk Solids", "Emulsifiers (331, 339, 340, 452)", "Common Salt", "Citric Acid", "Preservative (200)"],
+    "carbon_footprint_kg_co2e": 1.20,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 67,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Amul Cheese Cubes",
     "brand": "Amul",
     "barcode": "8901262010033",
-    "ingredients": [
-      "Milk Solids",
-      "Common Salt",
-      "Citric Acid",
-      "Preservative (200)"
-    ]
+    "ingredients": ["Milk Solids", "Common Salt", "Citric Acid", "Preservative (200)"],
+    "carbon_footprint_kg_co2e": 1.19,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 68,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Mother Dairy Paneer",
     "brand": "Mother Dairy",
     "barcode": "8904035500037",
-    "ingredients": [
-      "Milk Solids",
-      "Citric Acid"
-    ]
+    "ingredients": ["Milk Solids", "Citric Acid"],
+    "carbon_footprint_kg_co2e": 1.18,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 69,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Amul Paneer",
     "brand": "Amul",
     "barcode": "8901262010040",
-    "ingredients": [
-      "Milk Solids",
-      "Citric Acid"
-    ]
+    "ingredients": ["Milk Solids", "Citric Acid"],
+    "carbon_footprint_kg_co2e": 1.17,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 70,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Nestle Milkmaid",
     "brand": "Nestle",
     "barcode": "8901058845614",
-    "ingredients": [
-      "Milk Solids",
-      "Sugar"
-    ]
+    "ingredients": ["Milk Solids", "Sugar"],
+    "carbon_footprint_kg_co2e": 1.15,
+    "packaging_material": "Tin",
+    "certifications": ["FSSAI"],
+    "eco_score": 71,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Kissan Mixed Fruit Jam",
     "brand": "Kissan",
     "barcode": "8901030700022",
-    "ingredients": [
-      "Sugar",
-      "Fruit Pulp (Mixed Fruits)",
-      "Acidity Regulator (330)",
-      "Preservative (211)"
-    ]
+    "ingredients": ["Sugar", "Fruit Pulp (Mixed Fruits)", "Acidity Regulator (330)", "Preservative (211)"],
+    "carbon_footprint_kg_co2e": 0.80,
+    "packaging_material": "Glass",
+    "certifications": ["FSSAI"],
+    "eco_score": 72,
+    "sustainability_labels": ["Plastic-Free"]
   },
   {
     "name": "Nutella Hazelnut Spread",
     "brand": "Ferrero",
     "barcode": "8901233021439",
-    "ingredients": [
-      "Sugar",
-      "Palm Oil",
-      "Hazelnuts",
-      "Cocoa Solids",
-      "Skimmed Milk Powder",
-      "Emulsifier (322)",
-      "Vanillin"
-    ]
+    "ingredients": ["Sugar", "Palm Oil", "Hazelnuts", "Cocoa Solids", "Skimmed Milk Powder", "Emulsifier (322)", "Vanillin"],
+    "carbon_footprint_kg_co2e": 1.50,
+    "packaging_material": "Glass",
+    "certifications": [],
+    "eco_score": 60,
+    "sustainability_labels": ["Plastic-Free"]
   },
   {
     "name": "Patanjali Cow Ghee",
     "brand": "Patanjali",
     "barcode": "8904109440011",
-    "ingredients": [
-      "Cow Milk Fat"
-    ]
+    "ingredients": ["Cow Milk Fat"],
+    "carbon_footprint_kg_co2e": 1.80,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 58,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Amul Pure Ghee",
     "brand": "Amul",
     "barcode": "8901262010057",
-    "ingredients": [
-      "Milk Fat"
-    ]
+    "ingredients": ["Milk Fat"],
+    "carbon_footprint_kg_co2e": 1.82,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 59,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Saffola Oats",
     "brand": "Saffola",
     "barcode": "8901088000118",
-    "ingredients": [
-      "Whole Grain Rolled Oats"
-    ]
+    "ingredients": ["Whole Grain Rolled Oats"],
+    "carbon_footprint_kg_co2e": 0.52,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 65,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Quaker Oats",
     "brand": "Quaker",
     "barcode": "8901491101255",
-    "ingredients": [
-      "100% Whole Grain Rolled Oats"
-    ]
+    "ingredients": ["100% Whole Grain Rolled Oats"],
+    "carbon_footprint_kg_co2e": 0.53,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 66,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Kellogg's Corn Flakes",
     "brand": "Kellogg's",
     "barcode": "8901499001008",
-    "ingredients": [
-      "Corn",
-      "Sugar",
-      "Salt",
-      "Malt Extract",
-      "Vitamins",
-      "Minerals"
-    ]
+    "ingredients": ["Corn", "Sugar", "Salt", "Malt Extract", "Vitamins", "Minerals"],
+    "carbon_footprint_kg_co2e": 0.55,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 67,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Kellogg's Chocos",
     "brand": "Kellogg's",
     "barcode": "8901499001015",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Cocoa Solids",
-      "Malt Extract",
-      "Salt",
-      "Minerals",
-      "Vitamins"
-    ]
+    "ingredients": ["Wheat Flour", "Sugar", "Cocoa Solids", "Malt Extract", "Salt", "Minerals", "Vitamins"],
+    "carbon_footprint_kg_co2e": 0.57,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 68,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Cadbury Bournvita Biscuits",
     "brand": "Cadbury",
     "barcode": "8901233021446",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oil (Palm)",
-      "Bournvita Powder",
-      "Cocoa Solids",
-      "Milk Solids",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Emulsifiers (322, 471)",
-      "Artificial Flavouring Substances (Vanilla)"
-    ]
+    "ingredients": ["Wheat Flour", "Sugar", "Edible Vegetable Oil (Palm)", "Bournvita Powder", "Cocoa Solids", "Milk Solids", "Leavening Agents (500(ii), 503(ii))", "Salt", "Emulsifiers (322, 471)", "Artificial Flavouring Substances (Vanilla)"],
+    "carbon_footprint_kg_co2e": 0.90,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 60,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Good Day Cashew Cookies",
@@ -522,7 +635,12 @@
       "Milk Solids",
       "Emulsifiers (322, 471)",
       "Artificial Flavouring Substances (Vanilla)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.92,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 61,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Sunfeast Marie Light",
@@ -538,7 +656,12 @@
       "Milk Solids",
       "Emulsifiers (322, 471)",
       "Artificial Flavouring Substances (Vanilla)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.88,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 62,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Britannia NutriChoice Digestive Biscuits",
@@ -553,7 +676,12 @@
       "Salt",
       "Milk Solids",
       "Emulsifiers (322, 471)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.86,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 63,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Parle Monaco Classic Salted Biscuits",
@@ -567,7 +695,12 @@
       "Salt",
       "Milk Solids",
       "Emulsifiers (322, 471)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.84,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 64,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Haldiram's Moong Dal",
@@ -577,7 +710,12 @@
       "Moong Dal",
       "Edible Vegetable Oil (Palmolein)",
       "Salt"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.81,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 65,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Haldiram's Soan Papdi",
@@ -590,7 +728,12 @@
       "Chickpea Flour",
       "Milk Solids",
       "Cardamom"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.90,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 66,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Bikaji Bhujia",
@@ -601,7 +744,12 @@
       "Edible Vegetable Oil (Palmolein)",
       "Spices",
       "Salt"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.83,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 67,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Bikano Bikaneri Bhujia",
@@ -612,7 +760,12 @@
       "Edible Vegetable Oil (Palmolein)",
       "Spices",
       "Salt"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.83,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 68,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Haldiram's Rasgulla",
@@ -623,7 +776,12 @@
       "Sugar",
       "Water",
       "Rose Water"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.95,
+    "packaging_material": "Tin",
+    "certifications": ["FSSAI"],
+    "eco_score": 69,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Britannia Fruit Cake",
@@ -641,7 +799,12 @@
       "Milk Solids",
       "Emulsifiers (322, 471)",
       "Artificial Flavouring Substances (Vanilla)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.90,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 70,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Britannia Milk Bikis",
@@ -656,7 +819,12 @@
       "Salt",
       "Emulsifiers (322, 471)",
       "Artificial Flavouring Substances (Vanilla)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.89,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 71,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Parle Hide & Seek Choco Chip Cookies",
@@ -672,7 +840,12 @@
       "Milk Solids",
       "Emulsifiers (322, 471)",
       "Artificial Flavouring Substances (Vanilla)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.92,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 72,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Sunfeast Bounce Cream Biscuits",
@@ -688,7 +861,12 @@
       "Milk Solids",
       "Emulsifiers (322, 471)",
       "Artificial Flavouring Substances (Vanilla, Chocolate, Strawberry)"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.91,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 73,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Cadbury 5 Star Chocolate",
@@ -702,7 +880,12 @@
       "Hydrogenated Vegetable Fat",
       "Emulsifiers (442, 476)",
       "Permitted Flavours"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 1.10,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 74,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Cadbury Perk",
@@ -719,363 +902,12 @@
       "Yeast",
       "Raising Agents (500(ii), 503(ii))",
       "Permitted Flavouring"
-    ]
-  },
-  {
-    "name": "Nestle Munch",
-    "brand": "Nestle",
-    "barcode": "8901058845615",
-    "ingredients": [
-      "Sugar",
-      "Wheat Flour",
-      "Cocoa Solids",
-      "Milk Solids",
-      "Edible Vegetable Oil (Palm)",
-      "Emulsifiers (322, 476)",
-      "Salt",
-      "Yeast",
-      "Raising Agents (500(ii), 503(ii))",
-      "Permitted Flavouring"
-    ]
-  },
-  {
-    "name": "Nestle Milkybar",
-    "brand": "Nestle",
-    "barcode": "8901058845616",
-    "ingredients": [
-      "Sugar",
-      "Milk Solids",
-      "Edible Vegetable Oil (Palm)",
-      "Emulsifiers (322, 476)",
-      "Salt",
-      "Permitted Flavouring"
-    ]
-  },
-  {
-    "name": "Cadbury Gems",
-    "brand": "Cadbury",
-    "barcode": "8901233021477",
-    "ingredients": [
-      "Sugar",
-      "Cocoa Solids",
-      "Milk Solids",
-      "Edible Vegetable Oil (Palm)",
-      "Emulsifiers (322, 476)",
-      "Colors (102, 110, 122, 124, 133, 171)",
-      "Permitted Flavouring"
-    ]
-  },
-  {
-    "name": "Cadbury Silk Chocolate",
-    "brand": "Cadbury",
-    "barcode": "8901233021484",
-    "ingredients": [
-      "Milk Solids",
-      "Sugar",
-      "Cocoa Solids",
-      "Emulsifiers (442, 476)",
-      "Permitted Flavours"
-    ]
-  },
-  {
-    "name": "Nestle Bar One",
-    "brand": "Nestle",
-    "barcode": "8901058845617",
-    "ingredients": [
-      "Sugar",
-      "Glucose Syrup",
-      "Milk Solids",
-      "Cocoa Solids",
-      "Hydrogenated Vegetable Fat",
-      "Emulsifiers (442, 476)",
-      "Permitted Flavours"
-    ]
-  },
-  {
-    "name": "Cadbury Dairy Milk Silk Oreo",
-    "brand": "Cadbury",
-    "barcode": "8901233021491",
-    "ingredients": [
-      "Milk Solids",
-      "Sugar",
-      "Cocoa Solids",
-      "Wheat Flour",
-      "Edible Vegetable Oil (Palm)",
-      "Emulsifiers (442, 476)",
-      "Permitted Flavours"
-    ]
-  },
-  {
-    "name": "Nestle KitKat Dessert Delight",
-    "brand": "Nestle",
-    "barcode": "8901058845618",
-    "ingredients": [
-      "Sugar",
-      "Wheat Flour",
-      "Cocoa Solids",
-      "Milk Solids",
-      "Edible Vegetable Oil (Palm)",
-      "Emulsifiers (322, 476)",
-      "Salt",
-      "Yeast",
-      "Raising Agents (500(ii), 503(ii))",
-      "Permitted Flavouring"
-    ]
-  },
-  {
-    "name": "Parle Monaco Zeera Biscuits",
-    "brand": "Parle",
-    "barcode": "8901719101046",
-    "ingredients": [
-      "Wheat Flour",
-      "Edible Vegetable Oils (Palm, Palmolein)",
-      "Sugar",
-      "Cumin Seeds",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)"
-    ]
-  },
-  {
-    "name": "Britannia Bourbon Biscuits",
-    "brand": "Britannia",
-    "barcode": "8901063011207",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oil (Palm)",
-      "Cocoa Solids",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)",
-      "Artificial Flavouring Substances (Vanilla)"
-    ]
-  },
-  {
-    "name": "Sunfeast Mom's Magic Cashew & Almond",
-    "brand": "ITC",
-    "barcode": "8901725121409",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oil (Palm)",
-      "Cashew Nuts",
-      "Almonds",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)",
-      "Artificial Flavouring Substances (Vanilla)"
-    ]
-  },
-  {
-    "name": "Parle Krackjack Biscuits",
-    "brand": "Parle",
-    "barcode": "8901719101053",
-    "ingredients": [
-      "Wheat Flour",
-      "Edible Vegetable Oils (Palm, Palmolein)",
-      "Sugar",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)"
-    ]
-  },
-  {
-    "name": "Britannia 50-50 Maska Chaska",
-    "brand": "Britannia",
-    "barcode": "8901063011306",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oil (Palm)",
-      "Butter",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)",
-      "Artificial Flavouring Substances (Vanilla, Butter)"
-    ]
-  },
-  {
-    "name": "Britannia Little Hearts",
-    "brand": "Britannia",
-    "barcode": "8901063011405",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oil (Palm)",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)",
-      "Artificial Flavouring Substances (Vanilla)"
-    ]
-  },
-  {
-    "name": "Parle Fab Bourbon Biscuits",
-    "brand": "Parle",
-    "barcode": "8901719101060",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oils (Palm, Palmolein)",
-      "Cocoa Solids",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)",
-      "Artificial Flavouring Substances (Vanilla)"
-    ]
-  },
-  {
-    "name": "Sunfeast Glucose Biscuits",
-    "brand": "ITC",
-    "barcode": "8901725121508",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oil (Palm)",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)"
-    ]
-  },
-  {
-    "name": "Britannia Tiger Glucose Biscuits",
-    "brand": "Britannia",
-    "barcode": "8901063011504",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oil (Palm)",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)"
-    ]
-  },
-  {
-    "name": "Parle Kreams Gold Biscuits",
-    "brand": "Parle",
-    "barcode": "8901719101077",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oils (Palm, Palmolein)",
-      "Cream Filling",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)",
-      "Artificial Flavouring Substances (Vanilla, Chocolate, Strawberry)"
-    ]
-  },
-  {
-    "name": "Britannia Treat Jim Jam Biscuits",
-    "brand": "Britannia",
-    "barcode": "8901063011603",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oil (Palm)",
-      "Jam Filling",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)",
-      "Artificial Flavouring Substances (Vanilla, Strawberry)"
-    ]
-  },
-  {
-    "name": "Sunfeast Nice Biscuits",
-    "brand": "ITC",
-    "barcode": "8901725121607",
-    "ingredients": [
-      "Wheat Flour",
-      "Sugar",
-      "Edible Vegetable Oil (Palm)",
-      "Desiccated Coconut",
-      "Leavening Agents (500(ii), 503(ii))",
-      "Salt",
-      "Milk Solids",
-      "Emulsifiers (322, 471)",
-      "Artificial Flavouring Substances (Vanilla)"
-    ]
-  },
-  {
-    "name": "Cadbury Choclairs Gold",
-    "brand": "Cadbury",
-    "barcode": "8901233021507",
-    "ingredients": [
-      "Sugar",
-      "Glucose Syrup",
-      "Milk Solids",
-      "Hydrogenated Vegetable Fat",
-      "Cocoa Solids",
-      "Emulsifiers (442, 476)",
-      "Permitted Flavours"
-    ]
-  },
-  {
-    "name": "Parle Melody Chocolaty",
-    "brand": "Parle",
-    "barcode": "8901719101084",
-    "ingredients": [
-      "Sugar",
-      "Glucose Syrup",
-      "Milk Solids",
-      "Cocoa Solids",
-      "Hydrogenated Vegetable Fat",
-      "Emulsifiers (442, 476)",
-      "Permitted Flavours"
-    ]
-  },
-  {
-    "name": "Dabur Chyawanprash",
-    "brand": "Dabur",
-    "barcode": "8901207001013",
-    "ingredients": [
-      "Amla",
-      "Sugar",
-      "Honey",
-      "Ghee",
-      "Sesame Oil",
-      "Herbal Extracts",
-      "Spices"
-    ]
-  },
-  {
-    "name": "Patanjali Dant Kanti Toothpaste",
-    "brand": "Patanjali",
-    "barcode": "8904109440028",
-    "ingredients": [
-      "Calcium Carbonate",
-      "Herbal Extracts",
-      "Salt",
-      "Menthol",
-      "Preservatives"
-    ]
-  },
-  {
-    "name": "Colgate Strong Teeth Toothpaste",
-    "brand": "Colgate",
-    "barcode": "8901314001008",
-    "ingredients": [
-      "Calcium Carbonate",
-      "Sorbitol",
-      "Silica",
-      "Sodium Lauryl Sulphate",
-      "Flavour",
-      "Sodium Monofluorophosphate",
-      "Cellulose Gum",
-      "Sodium Saccharin",
-      "Preservatives"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 1.08,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 75,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Monster Energy Drink",
@@ -1101,7 +933,448 @@
       "Inositol",
       "Sweetener (Sucralose)",
       "Maltodextrin"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 1.82,
+    "packaging_material": "Aluminum Can",
+    "certifications": [],
+    "eco_score": 38,
+    "sustainability_labels": ["Recyclable"]
+  },
+  {
+    "name": "Cadbury Gems",
+    "brand": "Cadbury",
+    "barcode": "8901233021477",
+    "ingredients": [
+      "Sugar",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (322, 476)",
+      "Colors (102, 110, 122, 124, 133, 171)",
+      "Permitted Flavouring"
+    ],
+    "carbon_footprint_kg_co2e": 1.00,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 50,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Cadbury Silk Chocolate",
+    "brand": "Cadbury",
+    "barcode": "8901233021484",
+    "ingredients": [
+      "Milk Solids",
+      "Sugar",
+      "Cocoa Solids",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ],
+    "carbon_footprint_kg_co2e": 1.12,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 53,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Nestle Bar One",
+    "brand": "Nestle",
+    "barcode": "8901058845617",
+    "ingredients": [
+      "Sugar",
+      "Glucose Syrup",
+      "Milk Solids",
+      "Cocoa Solids",
+      "Hydrogenated Vegetable Fat",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ],
+    "carbon_footprint_kg_co2e": 1.09,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 52,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Cadbury Dairy Milk Silk Oreo",
+    "brand": "Cadbury",
+    "barcode": "8901233021491",
+    "ingredients": [
+      "Milk Solids",
+      "Sugar",
+      "Cocoa Solids",
+      "Wheat Flour",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ],
+    "carbon_footprint_kg_co2e": 1.15,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 54,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Nestle KitKat Dessert Delight",
+    "brand": "Nestle",
+    "barcode": "8901058845618",
+    "ingredients": [
+      "Sugar",
+      "Wheat Flour",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (322, 476)",
+      "Salt",
+      "Yeast",
+      "Raising Agents (500(ii), 503(ii))",
+      "Permitted Flavouring"
+    ],
+    "carbon_footprint_kg_co2e": 0.91,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 48,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Parle Monaco Zeera Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101046",
+    "ingredients": [
+      "Wheat Flour",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Sugar",
+      "Cumin Seeds",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ],
+    "carbon_footprint_kg_co2e": 0.84,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 64,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Britannia Bourbon Biscuits",
+    "brand": "Britannia",
+    "barcode": "8901063011207",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Cocoa Solids",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ],
+    "carbon_footprint_kg_co2e": 0.89,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 62,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Sunfeast Mom's Magic Cashew & Almond",
+    "brand": "ITC",
+    "barcode": "8901725121409",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Cashew Nuts",
+      "Almonds",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ],
+    "carbon_footprint_kg_co2e": 0.93,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 63,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Parle Krackjack Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101053",
+    "ingredients": [
+      "Wheat Flour",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Sugar",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ],
+    "carbon_footprint_kg_co2e": 0.84,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 64,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Britannia 50-50 Maska Chaska",
+    "brand": "Britannia",
+    "barcode": "8901063011306",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Butter",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla, Butter)"
+    ],
+    "carbon_footprint_kg_co2e": 0.87,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 65,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Britannia Little Hearts",
+    "brand": "Britannia",
+    "barcode": "8901063011405",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ],
+    "carbon_footprint_kg_co2e": 0.86,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 66,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Parle Fab Bourbon Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101060",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Cocoa Solids",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ],
+    "carbon_footprint_kg_co2e": 0.87,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 65,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Sunfeast Glucose Biscuits",
+    "brand": "ITC",
+    "barcode": "8901725121508",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ],
+    "carbon_footprint_kg_co2e": 0.85,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 64,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Britannia Tiger Glucose Biscuits",
+    "brand": "Britannia",
+    "barcode": "8901063011504",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ],
+    "carbon_footprint_kg_co2e": 0.85,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 64,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Parle Kreams Gold Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101077",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Cream Filling",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla, Chocolate, Strawberry)"
+    ],
+    "carbon_footprint_kg_co2e": 0.87,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 65,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Britannia Treat Jim Jam Biscuits",
+    "brand": "Britannia",
+    "barcode": "8901063011603",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Jam Filling",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla, Strawberry)"
+    ],
+    "carbon_footprint_kg_co2e": 0.88,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 66,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Sunfeast Nice Biscuits",
+    "brand": "ITC",
+    "barcode": "8901725121607",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Desiccated Coconut",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ],
+    "carbon_footprint_kg_co2e": 0.87,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 65,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Cadbury Choclairs Gold",
+    "brand": "Cadbury",
+    "barcode": "8901233021507",
+    "ingredients": [
+      "Sugar",
+      "Glucose Syrup",
+      "Milk Solids",
+      "Hydrogenated Vegetable Fat",
+      "Cocoa Solids",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ],
+    "carbon_footprint_kg_co2e": 1.05,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 62,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Parle Melody Chocolaty",
+    "brand": "Parle",
+    "barcode": "8901719101084",
+    "ingredients": [
+      "Sugar",
+      "Glucose Syrup",
+      "Milk Solids",
+      "Cocoa Solids",
+      "Hydrogenated Vegetable Fat",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ],
+    "carbon_footprint_kg_co2e": 1.05,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 62,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Dabur Chyawanprash",
+    "brand": "Dabur",
+    "barcode": "8901207001013",
+    "ingredients": [
+      "Amla",
+      "Sugar",
+      "Honey",
+      "Ghee",
+      "Sesame Oil",
+      "Herbal Extracts",
+      "Spices"
+    ],
+    "carbon_footprint_kg_co2e": 0.75,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 70,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Patanjali Dant Kanti Toothpaste",
+    "brand": "Patanjali",
+    "barcode": "8904109440028",
+    "ingredients": [
+      "Calcium Carbonate",
+      "Herbal Extracts",
+      "Salt",
+      "Menthol",
+      "Preservatives"
+    ],
+    "carbon_footprint_kg_co2e": 0.20,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 75,
+    "sustainability_labels": ["Recyclable Packaging"]
+  },
+  {
+    "name": "Colgate Strong Teeth Toothpaste",
+    "brand": "Colgate",
+    "barcode": "8901314001008",
+    "ingredients": [
+      "Calcium Carbonate",
+      "Sorbitol",
+      "Silica",
+      "Sodium Lauryl Sulphate",
+      "Flavour",
+      "Sodium Monofluorophosphate",
+      "Cellulose Gum",
+      "Sodium Saccharin",
+      "Preservatives"
+    ],
+    "carbon_footprint_kg_co2e": 0.22,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 74,
+    "sustainability_labels": ["Recyclable Packaging"]
   },
   {
     "name": "Pepsodent Germicheck Toothpaste",
@@ -1117,7 +1390,11 @@
       "Cellulose Gum",
       "Sodium Saccharin",
       "Preservatives"
-    ]
+    ],
+    "carbon_footprint_kg_co2e": 0.21,
+    "packaging_material": "Plastic",
+    "certifications": ["FSSAI"],
+    "eco_score": 73,
+    "sustainability_labels": ["Recyclable Packaging"]
   }
 ]
-
