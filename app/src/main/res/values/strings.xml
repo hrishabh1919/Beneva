@@ -23,5 +23,6 @@
     
     <!-- Alternatives -->
     <string name="alternatives_coming_soon">Alternative suggestions coming soon!</string>
-    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="enter">Enter</string>
+    <string name="password">***</string>
 </resources>

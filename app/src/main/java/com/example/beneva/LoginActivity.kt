@@ -1,87 +1,41 @@
 package com.example.beneva
 
-package com.yourpackage.beneva
-
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthProvider
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var googleSignInClient: GoogleSignInClient
-    private lateinit var firebaseAuth: FirebaseAuth
-
-    private val RC_SIGN_IN = 9001
-    private val TAG = "GoogleLogin"
+class LoginActivity : AppCompatActivity() {
+    private lateinit var emailField: EditText
+    private lateinit var passwordField: EditText
+    private lateinit var enterButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.login_activity)
 
-        firebaseAuth = FirebaseAuth.getInstance()
+        // Initialize views
+        emailField = findViewById(R.id.email_field)
+        passwordField = findViewById(R.id.password_field)
+        enterButton = findViewById(R.id.enter_button)
 
-        val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id)) // from google-services.json
-            .requestEmail()
-            .build()
+        // Set click listener for enter button
+        enterButton.setOnClickListener {
+            val email = emailField.text.toString()
+            val password = passwordField.text.toString()
 
-        googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions)
-
-        val googleSignInButton = findViewById<Button>(R.id.google_signin_button)
-
-        googleSignInButton.setOnClickListener {
-            signInWithGoogle()
-        }
-    }
-
-    private fun signInWithGoogle() {
-        val signInIntent = googleSignInClient.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == RC_SIGN_IN) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-
-            try {
-                val account = task.getResult(ApiException::class.java)!!
-                Log.d(TAG, "firebaseAuthWithGoogle:" + account.id)
-                firebaseAuthWithGoogle(account)
-            } catch (e: ApiException) {
-                Log.w(TAG, "Google sign in failed", e)
-                Toast.makeText(this, "Google Sign-In Failed", Toast.LENGTH_SHORT).show()
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
+
+            // For demo purposes, we'll just navigate to MainActivity
+            // In a real app, you would validate credentials here
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
-    }
-
-    private fun firebaseAuthWithGoogle(account: GoogleSignInAccount) {
-        val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-
-        firebaseAuth.signInWithCredential(credential)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Sign-in success
-                    val user = firebaseAuth.currentUser
-                    Toast.makeText(this, "Welcome, ${user?.displayName}", Toast.LENGTH_LONG).show()
-                    // Proceed to next screen
-                } else {
-                    // Sign-in failure
-                    Log.w(TAG, "signInWithCredential:failure", task.exception)
-                    Toast.makeText(this, "Firebase Authentication Failed", Toast.LENGTH_SHORT).show()
-                }
-            }
     }
 }
+
