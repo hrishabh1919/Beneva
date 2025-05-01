@@ -8,24 +8,24 @@
         android:id="@+id/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BENEVA"
-        android:textColor="#4caf50"
-        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:text="@string/beneva"
+        android:textColor="#43A047"
         android:textSize="36sp"
-        android:layout_centerInParent="true" />
+        android:textStyle="bold" />
 
     <!-- Tagline at Bottom Center -->
     <TextView
         android:id="@+id/tagline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Empowering\nConscious choices"
-        android:textColor="#4caf50"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp" />
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:text="@string/empowering_nconscious_choices"
+        android:textColor="#43A047"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
