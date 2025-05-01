@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f1f8e9">
@@ -8,7 +9,7 @@
         android:id="@+id/top_section"
         android:layout_width="match_parent"
         android:layout_height="340dp"
-        android:background="#4caf50"
+        android:background="#80CA84"
         android:clipToOutline="true">
 
         <!-- You may use a custom drawable for the curved effect or use a vector/shape background -->
@@ -22,7 +23,7 @@
             android:layout_marginStart="24dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_arrow_back_white"
-            android:tint="#F1F8E9" />
+            app:tint="#F1F8E9" />
 
         <!-- App Name and Tagline -->
         <LinearLayout
@@ -98,7 +99,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_email"
-                android:tint="#212121" />
+                app:tint="#212121" />
 
             <EditText
                 android:id="@+id/email_field"
@@ -129,7 +130,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_lock"
-                android:tint="#212121" />
+                app:tint="#212121" />
 
             <EditText
                 android:id="@+id/password_field"
@@ -137,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:hint="***"
+                android:hint="@string/password"
                 android:textColor="#212121"
                 android:textSize="16sp"
                 android:inputType="textPassword"
@@ -150,7 +151,7 @@
             android:id="@+id/enter_button"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Enter"
+            android:text="@string/enter"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:backgroundTint="#4caf50"
