@@ -42,27 +42,26 @@ dependencies {
     implementation libs.material
     implementation libs.androidx.constraintlayout
     
-    // Firebase
-    implementation platform(libs.firebase.bom)
-    implementation libs.firebase.database.ktx
-    
-    // ML Kit for barcode scanning
-    implementation libs.barcode.scanning
-    implementation libs.camera
-    
     // CameraX
     implementation libs.androidx.camera.core
     implementation libs.androidx.camera.camera2
     implementation libs.androidx.camera.lifecycle
     implementation libs.androidx.camera.view
     
+    // ML Kit for barcode scanning
+    implementation libs.barcode.scanning
+    
+    // Firebase
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.analytics.ktx
+    implementation libs.firebase.database.ktx
+    implementation libs.firebase.auth.ktx
+
     // Coroutines
     implementation libs.kotlinx.coroutines.android
     implementation libs.kotlinx.coroutines.play.services
-    implementation libs.play.services.vision.common
-    implementation libs.firebase.auth.ktx
-
+    
     testImplementation libs.junit
-    androidTestImplementation libs.androidx.junit.v115
-    androidTestImplementation libs.androidx.espresso.core.v351
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
 } 

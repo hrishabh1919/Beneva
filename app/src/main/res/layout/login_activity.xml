@@ -1,4 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f1f8e9">
@@ -9,50 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="340dp"
         android:background="#4caf50"
-        android:clipToOutline="true">
+        android:clipToOutline="true"
+        tools:targetApi="31">
 
         <!-- You may use a custom drawable for the curved effect or use a vector/shape background -->
-
-        <!-- Back Arrow -->
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginStart="24dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_arrow_back_white"
-            android:tint="#F1F8E9" />
 
         <!-- App Name and Tagline -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_below="@id/back_button"
             android:layout_marginTop="30dp"
-            android:layout_marginStart="24dp">
+            android:layout_marginStart="24dp"
+            tools:ignore="UselessParent">
 
             <TextView
                 android:id="@+id/app_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="BENEVA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/beneva"
                 android:textColor="#FFFFFF"
+                android:textSize="28sp"
                 android:textStyle="bold"
-                android:textSize="28sp" />
+                tools:ignore="TextContrastCheck" />
 
-            <TextView
-                android:id="@+id/tagline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Test text here"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:layout_marginTop="4dp" />
         </LinearLayout>
 
-        <!-- Status bar icons are handled by the OS, not in layout -->
     </RelativeLayout>
 
     <!-- White Card for Login Form -->
@@ -70,14 +54,15 @@
         android:clipToOutline="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentEnd="true"
+        tools:targetApi="31">
 
         <!-- Login Title -->
         <TextView
             android:id="@+id/login_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="#212121"
             android:textStyle="bold"
             android:textSize="24sp"
@@ -95,23 +80,27 @@
             android:paddingEnd="16dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/email_icon"
                 android:src="@drawable/ic_email"
-                android:tint="#212121" />
+                app:tint="#212121" />
 
             <EditText
                 android:id="@+id/email_field"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:background="@android:color/transparent"
-                android:hint="admin@email.com"
+                android:hint="@string/admin_email_com"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
                 android:textColor="#212121"
                 android:textSize="16sp"
-                android:inputType="textEmailAddress"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp" />
+                tools:ignore="VisualLintTextFieldSize" />
         </LinearLayout>
 
         <!-- Password Field -->
@@ -126,23 +115,27 @@
             android:paddingEnd="16dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_height="wrap_content"
+                android:layout_width="35dp"
+                android:contentDescription="@string/password"
                 android:src="@drawable/ic_lock"
-                android:tint="#212121" />
+                app:tint="#212121" />
 
             <EditText
                 android:id="@+id/password_field"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:background="@android:color/transparent"
-                android:hint="***"
+                android:hint="@string/login_password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
                 android:textColor="#212121"
                 android:textSize="16sp"
-                android:inputType="textPassword"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp" />
+                tools:ignore="VisualLintTextFieldSize,DuplicateSpeakableTextCheck" />
         </LinearLayout>
 
         <!-- Enter Button -->
@@ -150,12 +143,13 @@
             android:id="@+id/enter_button"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Enter"
+            android:text="@string/enter"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:backgroundTint="#4caf50"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/rounded_button_bg" />
+            android:background="@drawable/rounded_button_bg"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 </RelativeLayout>

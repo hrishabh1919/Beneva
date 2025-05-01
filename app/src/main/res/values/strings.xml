@@ -25,4 +25,8 @@
     <string name="alternatives_coming_soon">Alternative suggestions coming soon!</string>
     <string name="enter">Enter</string>
     <string name="password">***</string>
+    <string name="admin_email_com">admin@email.com</string>
+    <string name="login_password">***</string>
+    <string name="login">Login</string>
+    <string name="email_icon">email_icon</string>
 </resources>
