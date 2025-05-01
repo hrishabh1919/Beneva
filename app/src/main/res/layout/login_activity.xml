@@ -22,7 +22,7 @@
             android:layout_marginStart="24dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_arrow_back_white"
-            android:tint="#FFFFFF" />
+            android:tint="#F1F8E9" />
 
         <!-- App Name and Tagline -->
         <LinearLayout
