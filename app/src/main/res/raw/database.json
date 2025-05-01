@@ -1,0 +1,1123 @@
+[
+  {
+    "name": "Maggi 2-Minute Masala Noodles",
+    "brand": "Nestle",
+    "barcode": "8901058845611",
+    "ingredients": [
+      "Refined Wheat Flour (Maida)",
+      "Edible Vegetable Oil (Palm Oil)",
+      "Wheat Gluten",
+      "Salt",
+      "Mineral",
+      "Thickener (508)",
+      "Acidity Regulator (501(i), 500(ii), 451(i))",
+      "Color (150d)",
+      "Flavor Enhancer (635)",
+      "Dehydrated Vegetables (Onion, Garlic)",
+      "Spices and Condiments (Coriander, Turmeric, Chilli, Ginger, Cardamom, Clove, Pepper, Fennel, Nutmeg, Mace)",
+      "Sugar"
+    ]
+  },
+  {
+    "name": "Nescafe Classic Instant Coffee",
+    "brand": "Nestle",
+    "barcode": "8901058848674",
+    "ingredients": [
+      "100% Pure Coffee (Blend of Arabica and Robusta Beans)"
+    ]
+  },
+  {
+    "name": "Amul Taaza Toned Milk",
+    "brand": "Amul",
+    "barcode": "8901262010019",
+    "ingredients": [
+      "Toned Milk",
+      "Milk Solids",
+      "Vitamins A and D"
+    ]
+  },
+  {
+    "name": "Parle-G Glucose Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101015",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Invert Syrup",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Dough Conditioner (223)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Britannia Marie Gold Biscuits",
+    "brand": "Britannia",
+    "barcode": "8901063010606",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Invert Sugar Syrup",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Dough Conditioner (223)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Sunfeast Dark Fantasy Choco Fills",
+    "brand": "ITC",
+    "barcode": "8901725121003",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Invert Syrup",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla, Chocolate)"
+    ]
+  },
+  {
+    "name": "Cadbury Dairy Milk Chocolate",
+    "brand": "Cadbury",
+    "barcode": "8901233023228",
+    "ingredients": [
+      "Milk Solids",
+      "Sugar",
+      "Cocoa Solids",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ]
+  },
+  {
+    "name": "Bournvita Health Drink",
+    "brand": "Cadbury",
+    "barcode": "8901233021408",
+    "ingredients": [
+      "Malt Extract",
+      "Sugar",
+      "Cocoa Solids",
+      "Liquid Glucose",
+      "Milk Solids",
+      "Minerals",
+      "Vitamins",
+      "Emulsifiers (471)",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Nestle KitKat",
+    "brand": "Nestle",
+    "barcode": "8901058845612",
+    "ingredients": [
+      "Sugar",
+      "Wheat Flour",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (322, 476)",
+      "Salt",
+      "Yeast",
+      "Raising Agents (500(ii), 503(ii))",
+      "Permitted Flavouring"
+    ]
+  },
+  {
+    "name": "Haldiram's Aloo Bhujia",
+    "brand": "Haldiram's",
+    "barcode": "8904063200012",
+    "ingredients": [
+      "Potato",
+      "Edible Vegetable Oil (Palmolein)",
+      "Chickpea Flour",
+      "Spices and Condiments",
+      "Salt",
+      "Lemon Juice Powder"
+    ]
+  },
+  {
+    "name": "Lay's Classic Salted Chips",
+    "brand": "Lay's",
+    "barcode": "8901491100012",
+    "ingredients": [
+      "Potatoes",
+      "Edible Vegetable Oil (Palmolein)",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Kurkure Masala Munch",
+    "brand": "Kurkure",
+    "barcode": "8901491101248",
+    "ingredients": [
+      "Rice Meal",
+      "Corn Meal",
+      "Edible Vegetable Oil (Palmolein)",
+      "Gram Meal",
+      "Spices & Condiments",
+      "Salt",
+      "Sugar",
+      "Acidity Regulator (330)",
+      "Flavour Enhancer (627, 631)"
+    ]
+  },
+  {
+    "name": "Mother Dairy Dahi",
+    "brand": "Mother Dairy",
+    "barcode": "8904035500013",
+    "ingredients": [
+      "Pasteurized Milk",
+      "Active Culture"
+    ]
+  },
+  {
+    "name": "Dabur Honey",
+    "brand": "Dabur",
+    "barcode": "8901207001006",
+    "ingredients": [
+      "Honey"
+    ]
+  },
+  {
+    "name": "Tata Salt",
+    "brand": "Tata",
+    "barcode": "8901702001015",
+    "ingredients": [
+      "Iodised Salt"
+    ]
+  },
+  {
+    "name": "Aashirvaad Atta",
+    "brand": "ITC",
+    "barcode": "8901725121102",
+    "ingredients": [
+      "Whole Wheat"
+    ]
+  },
+  {
+    "name": "Fortune Sunlite Refined Sunflower Oil",
+    "brand": "Fortune",
+    "barcode": "8906007280018",
+    "ingredients": [
+      "Refined Sunflower Oil",
+      "Vitamin A",
+      "Vitamin D"
+    ]
+  },
+  {
+    "name": "Saffola Gold Oil",
+    "brand": "Saffola",
+    "barcode": "8901088000101",
+    "ingredients": [
+      "Refined Rice Bran Oil",
+      "Refined Sunflower Oil",
+      "Vitamin A",
+      "Vitamin D"
+    ]
+  },
+  {
+    "name": "MDH Deggi Mirch",
+    "brand": "MDH",
+    "barcode": "8902167000013",
+    "ingredients": [
+      "Red Chilli",
+      "Capsicum"
+    ]
+  },
+  {
+    "name": "Everest Turmeric Powder",
+    "brand": "Everest",
+    "barcode": "8901786000017",
+    "ingredients": [
+      "Turmeric"
+    ]
+  },
+  {
+    "name": "Catch Black Pepper Powder",
+    "brand": "Catch",
+    "barcode": "8901192100016",
+    "ingredients": [
+      "Black Pepper"
+    ]
+  },
+  {
+    "name": "Brooke Bond Red Label Tea",
+    "brand": "Brooke Bond",
+    "barcode": "8901030000018",
+    "ingredients": [
+      "Tea"
+    ]
+  },
+  {
+    "name": "Tata Tea Premium",
+    "brand": "Tata",
+    "barcode": "8901207002003",
+    "ingredients": [
+      "Tea"
+    ]
+  },
+  {
+    "name": "Bru Instant Coffee",
+    "brand": "Bru",
+    "barcode": "8901030700015",
+    "ingredients": [
+      "Coffee",
+      "Chicory"
+    ]
+  },
+  {
+    "name": "Complan Nutrition Drink",
+    "brand": "Complan",
+    "barcode": "8901542000018",
+    "ingredients": [
+      "Milk Solids",
+      "Sugar",
+      "Malt Extract",
+      "Edible Vegetable Oil (Palm)",
+      "Minerals",
+      "Vitamins",
+      "Cocoa Solids",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Horlicks Health Drink",
+    "brand": "Horlicks",
+    "barcode": "8901571000013",
+    "ingredients": [
+      "Malt Extract",
+      "Sugar",
+      "Milk Solids",
+      "Cocoa Solids",
+      "Minerals",
+      "Vitamins"
+    ]
+  },
+  {
+    "name": "Boost Health Drink",
+    "brand": "Boost",
+    "barcode": "8901571000020",
+    "ingredients": [
+      "Malt Extract",
+      "Sugar",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Minerals",
+      "Vitamins"
+    ]
+  },
+  {
+    "name": "Bournvita Lil Champs",
+    "brand": "Cadbury",
+    "barcode": "8901233021422",
+    "ingredients": [
+      "Malt Extract",
+      "Sugar",
+      "Milk Solids",
+      "Cocoa Solids",
+      "Minerals",
+      "Vitamins"
+    ]
+  },
+  {
+    "name": "Nestle Everyday Dairy Whitener",
+    "brand": "Nestle",
+    "barcode": "8901058845613",
+    "ingredients": [
+      "Milk Solids",
+      "Sugar",
+      "Stabilizers (340(ii), 451(i))"
+    ]
+  },
+  {
+    "name": "Amul Butter",
+    "brand": "Amul",
+    "barcode": "8901262010026",
+    "ingredients": [
+      "Pasteurized Butter",
+      "Common Salt"
+    ]
+  },
+  {
+    "name": "Mother Dairy Butter",
+    "brand": "Mother Dairy",
+    "barcode": "8904035500020",
+    "ingredients": [
+      "Pasteurized Butter",
+      "Common Salt"
+    ]
+  },
+  {
+    "name": "Britannia Cheese Slices",
+    "brand": "Britannia",
+    "barcode": "8901063010705",
+    "ingredients": [
+      "Milk Solids",
+      "Emulsifiers (331, 339, 340, 452)",
+      "Common Salt",
+      "Citric Acid",
+      "Preservative (200)"
+    ]
+  },
+  {
+    "name": "Amul Cheese Cubes",
+    "brand": "Amul",
+    "barcode": "8901262010033",
+    "ingredients": [
+      "Milk Solids",
+      "Common Salt",
+      "Citric Acid",
+      "Preservative (200)"
+    ]
+  },
+  {
+    "name": "Mother Dairy Paneer",
+    "brand": "Mother Dairy",
+    "barcode": "8904035500037",
+    "ingredients": [
+      "Milk Solids",
+      "Citric Acid"
+    ]
+  },
+  {
+    "name": "Amul Paneer",
+    "brand": "Amul",
+    "barcode": "8901262010040",
+    "ingredients": [
+      "Milk Solids",
+      "Citric Acid"
+    ]
+  },
+  {
+    "name": "Nestle Milkmaid",
+    "brand": "Nestle",
+    "barcode": "8901058845614",
+    "ingredients": [
+      "Milk Solids",
+      "Sugar"
+    ]
+  },
+  {
+    "name": "Kissan Mixed Fruit Jam",
+    "brand": "Kissan",
+    "barcode": "8901030700022",
+    "ingredients": [
+      "Sugar",
+      "Fruit Pulp (Mixed Fruits)",
+      "Acidity Regulator (330)",
+      "Preservative (211)"
+    ]
+  },
+  {
+    "name": "Nutella Hazelnut Spread",
+    "brand": "Ferrero",
+    "barcode": "8901233021439",
+    "ingredients": [
+      "Sugar",
+      "Palm Oil",
+      "Hazelnuts",
+      "Cocoa Solids",
+      "Skimmed Milk Powder",
+      "Emulsifier (322)",
+      "Vanillin"
+    ]
+  },
+  {
+    "name": "Patanjali Cow Ghee",
+    "brand": "Patanjali",
+    "barcode": "8904109440011",
+    "ingredients": [
+      "Cow Milk Fat"
+    ]
+  },
+  {
+    "name": "Amul Pure Ghee",
+    "brand": "Amul",
+    "barcode": "8901262010057",
+    "ingredients": [
+      "Milk Fat"
+    ]
+  },
+  {
+    "name": "Saffola Oats",
+    "brand": "Saffola",
+    "barcode": "8901088000118",
+    "ingredients": [
+      "Whole Grain Rolled Oats"
+    ]
+  },
+  {
+    "name": "Quaker Oats",
+    "brand": "Quaker",
+    "barcode": "8901491101255",
+    "ingredients": [
+      "100% Whole Grain Rolled Oats"
+    ]
+  },
+  {
+    "name": "Kellogg's Corn Flakes",
+    "brand": "Kellogg's",
+    "barcode": "8901499001008",
+    "ingredients": [
+      "Corn",
+      "Sugar",
+      "Salt",
+      "Malt Extract",
+      "Vitamins",
+      "Minerals"
+    ]
+  },
+  {
+    "name": "Kellogg's Chocos",
+    "brand": "Kellogg's",
+    "barcode": "8901499001015",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Cocoa Solids",
+      "Malt Extract",
+      "Salt",
+      "Minerals",
+      "Vitamins"
+    ]
+  },
+  {
+    "name": "Cadbury Bournvita Biscuits",
+    "brand": "Cadbury",
+    "barcode": "8901233021446",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Bournvita Powder",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Good Day Cashew Cookies",
+    "brand": "Britannia",
+    "barcode": "8901063010804",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Cashew Nuts",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Sunfeast Marie Light",
+    "brand": "ITC",
+    "barcode": "8901725121201",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Invert Sugar Syrup",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Britannia NutriChoice Digestive Biscuits",
+    "brand": "Britannia",
+    "barcode": "8901063010903",
+    "ingredients": [
+      "Whole Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Wheat Bran",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ]
+  },
+  {
+    "name": "Parle Monaco Classic Salted Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101022",
+    "ingredients": [
+      "Wheat Flour",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Sugar",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ]
+  },
+  {
+    "name": "Haldiram's Moong Dal",
+    "brand": "Haldiram's",
+    "barcode": "8904063200029",
+    "ingredients": [
+      "Moong Dal",
+      "Edible Vegetable Oil (Palmolein)",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Haldiram's Soan Papdi",
+    "brand": "Haldiram's",
+    "barcode": "8904063200036",
+    "ingredients": [
+      "Sugar",
+      "Refined Palmolein Oil",
+      "Wheat Flour",
+      "Chickpea Flour",
+      "Milk Solids",
+      "Cardamom"
+    ]
+  },
+  {
+    "name": "Bikaji Bhujia",
+    "brand": "Bikaji",
+    "barcode": "8906021120016",
+    "ingredients": [
+      "Gram Flour",
+      "Edible Vegetable Oil (Palmolein)",
+      "Spices",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Bikano Bikaneri Bhujia",
+    "brand": "Bikano",
+    "barcode": "8906007280025",
+    "ingredients": [
+      "Gram Flour",
+      "Edible Vegetable Oil (Palmolein)",
+      "Spices",
+      "Salt"
+    ]
+  },
+  {
+    "name": "Haldiram's Rasgulla",
+    "brand": "Haldiram's",
+    "barcode": "8904063200043",
+    "ingredients": [
+      "Cottage Cheese",
+      "Sugar",
+      "Water",
+      "Rose Water"
+    ]
+  },
+  {
+    "name": "Britannia Fruit Cake",
+    "brand": "Britannia",
+    "barcode": "8901063011009",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Eggs",
+      "Raisins",
+      "Candied Fruit",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Britannia Milk Bikis",
+    "brand": "Britannia",
+    "barcode": "8901063011108",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Milk Solids",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Parle Hide & Seek Choco Chip Cookies",
+    "brand": "Parle",
+    "barcode": "8901719101039",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Choco Chips",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Sunfeast Bounce Cream Biscuits",
+    "brand": "ITC",
+    "barcode": "8901725121300",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Cream Filling",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla, Chocolate, Strawberry)"
+    ]
+  },
+  {
+    "name": "Cadbury 5 Star Chocolate",
+    "brand": "Cadbury",
+    "barcode": "8901233021453",
+    "ingredients": [
+      "Sugar",
+      "Glucose Syrup",
+      "Milk Solids",
+      "Cocoa Solids",
+      "Hydrogenated Vegetable Fat",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ]
+  },
+  {
+    "name": "Cadbury Perk",
+    "brand": "Cadbury",
+    "barcode": "8901233021460",
+    "ingredients": [
+      "Sugar",
+      "Wheat Flour",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (322, 476)",
+      "Salt",
+      "Yeast",
+      "Raising Agents (500(ii), 503(ii))",
+      "Permitted Flavouring"
+    ]
+  },
+  {
+    "name": "Nestle Munch",
+    "brand": "Nestle",
+    "barcode": "8901058845615",
+    "ingredients": [
+      "Sugar",
+      "Wheat Flour",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (322, 476)",
+      "Salt",
+      "Yeast",
+      "Raising Agents (500(ii), 503(ii))",
+      "Permitted Flavouring"
+    ]
+  },
+  {
+    "name": "Nestle Milkybar",
+    "brand": "Nestle",
+    "barcode": "8901058845616",
+    "ingredients": [
+      "Sugar",
+      "Milk Solids",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (322, 476)",
+      "Salt",
+      "Permitted Flavouring"
+    ]
+  },
+  {
+    "name": "Cadbury Gems",
+    "brand": "Cadbury",
+    "barcode": "8901233021477",
+    "ingredients": [
+      "Sugar",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (322, 476)",
+      "Colors (102, 110, 122, 124, 133, 171)",
+      "Permitted Flavouring"
+    ]
+  },
+  {
+    "name": "Cadbury Silk Chocolate",
+    "brand": "Cadbury",
+    "barcode": "8901233021484",
+    "ingredients": [
+      "Milk Solids",
+      "Sugar",
+      "Cocoa Solids",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ]
+  },
+  {
+    "name": "Nestle Bar One",
+    "brand": "Nestle",
+    "barcode": "8901058845617",
+    "ingredients": [
+      "Sugar",
+      "Glucose Syrup",
+      "Milk Solids",
+      "Cocoa Solids",
+      "Hydrogenated Vegetable Fat",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ]
+  },
+  {
+    "name": "Cadbury Dairy Milk Silk Oreo",
+    "brand": "Cadbury",
+    "barcode": "8901233021491",
+    "ingredients": [
+      "Milk Solids",
+      "Sugar",
+      "Cocoa Solids",
+      "Wheat Flour",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ]
+  },
+  {
+    "name": "Nestle KitKat Dessert Delight",
+    "brand": "Nestle",
+    "barcode": "8901058845618",
+    "ingredients": [
+      "Sugar",
+      "Wheat Flour",
+      "Cocoa Solids",
+      "Milk Solids",
+      "Edible Vegetable Oil (Palm)",
+      "Emulsifiers (322, 476)",
+      "Salt",
+      "Yeast",
+      "Raising Agents (500(ii), 503(ii))",
+      "Permitted Flavouring"
+    ]
+  },
+  {
+    "name": "Parle Monaco Zeera Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101046",
+    "ingredients": [
+      "Wheat Flour",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Sugar",
+      "Cumin Seeds",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ]
+  },
+  {
+    "name": "Britannia Bourbon Biscuits",
+    "brand": "Britannia",
+    "barcode": "8901063011207",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Cocoa Solids",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Sunfeast Mom's Magic Cashew & Almond",
+    "brand": "ITC",
+    "barcode": "8901725121409",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Cashew Nuts",
+      "Almonds",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Parle Krackjack Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101053",
+    "ingredients": [
+      "Wheat Flour",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Sugar",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ]
+  },
+  {
+    "name": "Britannia 50-50 Maska Chaska",
+    "brand": "Britannia",
+    "barcode": "8901063011306",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Butter",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla, Butter)"
+    ]
+  },
+  {
+    "name": "Britannia Little Hearts",
+    "brand": "Britannia",
+    "barcode": "8901063011405",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Parle Fab Bourbon Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101060",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Cocoa Solids",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Sunfeast Glucose Biscuits",
+    "brand": "ITC",
+    "barcode": "8901725121508",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ]
+  },
+  {
+    "name": "Britannia Tiger Glucose Biscuits",
+    "brand": "Britannia",
+    "barcode": "8901063011504",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)"
+    ]
+  },
+  {
+    "name": "Parle Kreams Gold Biscuits",
+    "brand": "Parle",
+    "barcode": "8901719101077",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oils (Palm, Palmolein)",
+      "Cream Filling",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla, Chocolate, Strawberry)"
+    ]
+  },
+  {
+    "name": "Britannia Treat Jim Jam Biscuits",
+    "brand": "Britannia",
+    "barcode": "8901063011603",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Jam Filling",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla, Strawberry)"
+    ]
+  },
+  {
+    "name": "Sunfeast Nice Biscuits",
+    "brand": "ITC",
+    "barcode": "8901725121607",
+    "ingredients": [
+      "Wheat Flour",
+      "Sugar",
+      "Edible Vegetable Oil (Palm)",
+      "Desiccated Coconut",
+      "Leavening Agents (500(ii), 503(ii))",
+      "Salt",
+      "Milk Solids",
+      "Emulsifiers (322, 471)",
+      "Artificial Flavouring Substances (Vanilla)"
+    ]
+  },
+  {
+    "name": "Cadbury Choclairs Gold",
+    "brand": "Cadbury",
+    "barcode": "8901233021507",
+    "ingredients": [
+      "Sugar",
+      "Glucose Syrup",
+      "Milk Solids",
+      "Hydrogenated Vegetable Fat",
+      "Cocoa Solids",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ]
+  },
+  {
+    "name": "Parle Melody Chocolaty",
+    "brand": "Parle",
+    "barcode": "8901719101084",
+    "ingredients": [
+      "Sugar",
+      "Glucose Syrup",
+      "Milk Solids",
+      "Cocoa Solids",
+      "Hydrogenated Vegetable Fat",
+      "Emulsifiers (442, 476)",
+      "Permitted Flavours"
+    ]
+  },
+  {
+    "name": "Dabur Chyawanprash",
+    "brand": "Dabur",
+    "barcode": "8901207001013",
+    "ingredients": [
+      "Amla",
+      "Sugar",
+      "Honey",
+      "Ghee",
+      "Sesame Oil",
+      "Herbal Extracts",
+      "Spices"
+    ]
+  },
+  {
+    "name": "Patanjali Dant Kanti Toothpaste",
+    "brand": "Patanjali",
+    "barcode": "8904109440028",
+    "ingredients": [
+      "Calcium Carbonate",
+      "Herbal Extracts",
+      "Salt",
+      "Menthol",
+      "Preservatives"
+    ]
+  },
+  {
+    "name": "Colgate Strong Teeth Toothpaste",
+    "brand": "Colgate",
+    "barcode": "8901314001008",
+    "ingredients": [
+      "Calcium Carbonate",
+      "Sorbitol",
+      "Silica",
+      "Sodium Lauryl Sulphate",
+      "Flavour",
+      "Sodium Monofluorophosphate",
+      "Cellulose Gum",
+      "Sodium Saccharin",
+      "Preservatives"
+    ]
+  },
+  {
+    "name": "Monster Energy Drink",
+    "brand": "Monster",
+    "barcode": "897036691427",
+    "ingredients": [
+      "Carbonated Water",
+      "Sucrose",
+      "Glucose Syrup",
+      "Citric Acid",
+      "Natural and Artificial Flavourings",
+      "Taurine (0.4%)",
+      "Acidity Regulator (Sodium Citrate)",
+      "Panax Ginseng Root Extract (0.08%)",
+      "L-Carnitine L-Tartrate (0.04%)",
+      "Caffeine (0.03%)",
+      "Preservatives (Sorbic Acid, Benzoic Acid)",
+      "Colour (Anthocyanins)",
+      "Vitamins (B2, B3, B6, B12)",
+      "Sodium Chloride",
+      "D-Glucuronolactone",
+      "Guarana Seed Extract (0.002%)",
+      "Inositol",
+      "Sweetener (Sucralose)",
+      "Maltodextrin"
+    ]
+  },
+  {
+    "name": "Pepsodent Germicheck Toothpaste",
+    "brand": "Pepsodent",
+    "barcode": "8901030700039",
+    "ingredients": [
+      "Calcium Carbonate",
+      "Sorbitol",
+      "Silica",
+      "Sodium Lauryl Sulphate",
+      "Flavour",
+      "Sodium Monofluorophosphate",
+      "Cellulose Gum",
+      "Sodium Saccharin",
+      "Preservatives"
+    ]
+  }
+]
+
