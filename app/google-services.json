@@ -12,7 +12,20 @@
           "package_name": "com.example.beneva"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "955645976333-7190dl92rdhj4106ded6ifboum3537tc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.beneva",
+            "certificate_hash": "cb49273804c570c49b60a13b56c41ef6f016eb37"
+          }
+        },
+        {
+          "client_id": "955645976333-oeleoqgtd9jggdembg9bfc6h8a72b14c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCY6hCkL-mCehHpbyxSE7EYa8KVM3XcpyY"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955645976333-oeleoqgtd9jggdembg9bfc6h8a72b14c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
