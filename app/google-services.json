@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "955645976333",
+    "project_id": "beneva-4f4f6",
+    "storage_bucket": "beneva-4f4f6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955645976333:android:da957a3239212def2ada44",
+        "android_client_info": {
+          "package_name": "com.example.beneva"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY6hCkL-mCehHpbyxSE7EYa8KVM3XcpyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
