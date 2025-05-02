@@ -66,4 +66,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 Your Name - Raghav , Hrishabh , Naitik , Harshit
 
-Project Link: [https://github.com/yourusername/Beneva](https://github.com/yourusername/Beneva)
+Project Link: [https://github.com/hrishabh1919/Beneva](https://github.com/hrishabh1919/Beneva)
