@@ -45,4 +45,13 @@
     <string name="vegan">🌱 Vegan</string>
     <string name="ecoscore_0">🟢 EcoScore: 0</string>
     <string name="suggest_alternatives">Suggest Alternatives</string>
+    <string name="default_web_client_id">955645976333-oeleoqgtd9jggdembg9bfc6h8a72b14c.apps.googleusercontent.com</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+
+    <!-- Error Screen -->
+    <string name="oops">Oops!</string>
+    <string name="invalid_place">Invalid Place</string>
+    <string name="error_message">Sorry, we couldn\'t find what you\'re looking for.</string>
+    <string name="take_me_back">Take Me Back</string>
+
 </resources>
