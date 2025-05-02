@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+    <!-- Camera Preview Card -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cameraPreviewCard"
         android:layout_width="0dp"
@@ -12,10 +13,10 @@
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/productInfoCard"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/productInfoCard">
 
         <androidx.camera.view.PreviewView
             android:id="@+id/cameraPreview"
@@ -24,6 +25,7 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- Product Info Card -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/productInfoCard"
         android:layout_width="0dp"
@@ -31,15 +33,30 @@
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rescanButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_another_product"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/scanStatusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:padding="8dp"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/productName"
@@ -61,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/badge_background"
                     android:padding="4dp"
-                    android:text="🟢 EcoScore: 0"
+                    android:text="@string/ecoscore_0"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -71,7 +88,7 @@
                     android:layout_marginStart="8dp"
                     android:background="@drawable/badge_background"
                     android:padding="4dp"
-                    android:text="🌱 Vegan"
+                    android:text="@string/vegan_friendly"
                     android:textColor="@color/white"
                     android:visibility="gone" />
 
@@ -82,7 +99,7 @@
                     android:layout_marginStart="8dp"
                     android:background="@drawable/badge_background"
                     android:padding="4dp"
-                    android:text="✅ Recyclable"
+                    android:text="@string/recyclable"
                     android:textColor="@color/white"
                     android:visibility="gone" />
             </LinearLayout>
@@ -113,11 +130,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Suggest Alternatives"
+                android:text="@string/alternatives_coming_soon"
                 android:visibility="gone" />
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout> 
+</androidx.constraintlayout.widget.ConstraintLayout>

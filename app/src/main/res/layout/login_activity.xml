@@ -10,10 +10,9 @@
         android:id="@+id/top_section"
         android:layout_width="match_parent"
         android:layout_height="340dp"
-        android:background="#4caf50"
+        android:background="#5CC35E"
         android:clipToOutline="true"
         tools:targetApi="31">
-
         <!-- You may use a custom drawable for the curved effect or use a vector/shape background -->
 
         <!-- App Name and Tagline -->

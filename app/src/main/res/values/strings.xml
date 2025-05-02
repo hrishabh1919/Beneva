@@ -29,4 +29,20 @@
     <string name="login_password">***</string>
     <string name="login">Login</string>
     <string name="email_icon">email_icon</string>
+
+    <string name="scanning_for_barcodes">Scanning for barcodes…</string>
+    <string name="barcode_detected">Barcode detected: %1$s</string>
+    <string name="fetching_product_info">Fetching product information…</string>
+    <string name="searching_database">Searching product database…</string>
+    <string name="product_not_found_long">Product with barcode %1$s not found in database</string>
+    <string name="network_error">Network error. Please try again.</string>
+    <string name="vegan_friendly">Vegan Friendly</string>
+    <string name="not_vegan">Not Vegan</string>
+    <string name="recyclability_unknown">Recyclability Unknown</string>
+    <string name="camera_permission_denied">Camera permission is required for scanning</string>
+
+    <string name="scan_another_product">Scan Another Product</string>
+    <string name="vegan">🌱 Vegan</string>
+    <string name="ecoscore_0">🟢 EcoScore: 0</string>
+    <string name="suggest_alternatives">Suggest Alternatives</string>
 </resources>

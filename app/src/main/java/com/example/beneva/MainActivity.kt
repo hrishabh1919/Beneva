@@ -1,98 +1,35 @@
 package com.example.beneva
 
-import android.Manifest
-import android.content.pm.PackageManager
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.camera.core.CameraSelector
-import androidx.camera.core.ImageAnalysis
-import androidx.camera.core.Preview
+import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.google.firebase.database.FirebaseDatabase
 import com.google.mlkit.vision.barcode.BarcodeScanner
-import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
-import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
-import android.view.View
-import android.widget.TextView
-import com.google.android.material.button.MaterialButton
+import com.google.firebase.firestore.FirebaseFirestore
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var barcodeScanner: BarcodeScanner
-    private lateinit var cameraExecutor: ExecutorService
-    private val CAMERA_PERMISSION_REQUEST = 1001
-    private val database = FirebaseDatabase.getInstance().reference
 
-    // UI Components
-    private lateinit var productName: TextView
-    private lateinit var ecoScore: TextView
-    private lateinit var veganStatus: TextView
-    private lateinit var recyclableStatus: TextView
-    private lateinit var allergens: TextView
-    private lateinit var packagingInfo: TextView
-    private lateinit var brandSustainability: TextView
-    private lateinit var suggestAlternativesButton: MaterialButton
-    private lateinit var cameraPreview: PreviewView
+    private lateinit var cameraExecutor: ExecutorService
+    private lateinit var previewView: PreviewView
+    private val db = FirebaseFirestore.getInstance()
+    private var lastScannedCode: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize UI components
-        initializeViews()
-
-        // Initialize barcode scanner
-        val options = BarcodeScannerOptions.Builder()
-            .setBarcodeFormats(
-                Barcode.FORMAT_EAN_13,
-                Barcode.FORMAT_UPC_A,
-                Barcode.FORMAT_EAN_8,
-                Barcode.FORMAT_UPC_E
-            )
-            .build()
-        barcodeScanner = BarcodeScanning.getClient(options)
-
-        // Initialize camera executor
+        previewView = findViewById(R.id.cameraPreview)
         cameraExecutor = Executors.newSingleThreadExecutor()
 
-        // Check and request camera permission
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-            != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.CAMERA),
-                CAMERA_PERMISSION_REQUEST
-            )
-        } else {
-            startCamera()
-        }
-    }
-
-    private fun initializeViews() {
-        productName = findViewById(R.id.productName)
-        ecoScore = findViewById(R.id.ecoScore)
-        veganStatus = findViewById(R.id.veganStatus)
-        recyclableStatus = findViewById(R.id.recyclableStatus)
-        allergens = findViewById(R.id.allergens)
-        packagingInfo = findViewById(R.id.packagingInfo)
-        brandSustainability = findViewById(R.id.brandSustainability)
-        suggestAlternativesButton = findViewById(R.id.suggestAlternativesButton)
-        cameraPreview = findViewById(R.id.cameraPreview)
-
-        suggestAlternativesButton.setOnClickListener {
-            Toast.makeText(this, R.string.alternatives_coming_soon, Toast.LENGTH_SHORT).show()
-        }
+        startCamera()
     }
 
     private fun startCamera() {
@@ -101,157 +38,97 @@ class MainActivity : AppCompatActivity() {
         cameraProviderFuture.addListener({
             val cameraProvider = cameraProviderFuture.get()
 
-            val preview = Preview.Builder()
-                .build()
-                .also {
-                    it.setSurfaceProvider(cameraPreview.surfaceProvider)
-                }
+            val preview = Preview.Builder().build().also {
+                it.setSurfaceProvider(previewView.surfaceProvider)
+            }
 
-            val imageAnalyzer = ImageAnalysis.Builder()
+            val barcodeScanner: BarcodeScanner = BarcodeScanning.getClient()
+            val analyzer = ImageAnalysis.Builder()
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                 .build()
-                .also {
-                    it.setAnalyzer(cameraExecutor) { imageProxy ->
-                        val mediaImage = imageProxy.image
-                        if (mediaImage != null) {
-                            val image = InputImage.fromMediaImage(
-                                mediaImage,
-                                imageProxy.imageInfo.rotationDegrees
-                            )
-                            processBarcode(image)
-                        }
-                        imageProxy.close()
-                    }
+                .also { imageAnalysis ->
+                    imageAnalysis.setAnalyzer(
+                        cameraExecutor,
+                        BarcodeAnalyzer(barcodeScanner)
+                    )
                 }
 
-            try {
-                // Unbind any previous use cases
-                cameraProvider.unbindAll()
+            val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 
-                // Bind use cases to camera
+            try {
+                cameraProvider.unbindAll()
                 cameraProvider.bindToLifecycle(
-                    this,
-                    CameraSelector.DEFAULT_BACK_CAMERA,
-                    preview,
-                    imageAnalyzer
+                    this, cameraSelector, preview, analyzer
                 )
             } catch (e: Exception) {
-                Toast.makeText(this, R.string.camera_error, Toast.LENGTH_SHORT).show()
+                Log.e("MainActivity", "Use case binding failed", e)
             }
+
         }, ContextCompat.getMainExecutor(this))
     }
 
-    private fun processBarcode(image: InputImage) {
-        barcodeScanner.process(image)
-            .addOnSuccessListener { barcodes ->
-                for (barcode in barcodes) {
-                    val rawValue = barcode.rawValue
-                    if (rawValue != null) {
-                        // Stop scanning after finding a barcode
-                        cameraExecutor.shutdown()
-                        fetchProductInfo(rawValue)
+    @ExperimentalGetImage
+    private fun processImageProxy(scanner: BarcodeScanner, imageProxy: ImageProxy) {
+        val mediaImage = imageProxy.image
+        if (mediaImage != null) {
+            val image = InputImage.fromMediaImage(mediaImage, imageProxy.imageInfo.rotationDegrees)
+            scanner.process(image)
+                .addOnSuccessListener { barcodes ->
+                    for (barcode in barcodes) {
+                        val rawValue = barcode.rawValue
+                        if (rawValue != null && rawValue != lastScannedCode) {
+                            lastScannedCode = rawValue
+                            Log.d("MainActivity", "Barcode detected: $rawValue")
+                            fetchProductInfo(rawValue)
+                        }
                     }
                 }
-            }
-            .addOnFailureListener {
-                Toast.makeText(this, R.string.barcode_scan_failed, Toast.LENGTH_SHORT).show()
-            }
+                .addOnFailureListener {
+                    Log.e("MainActivity", "Barcode scanning failed", it)
+                }
+                .addOnCompleteListener {
+                    imageProxy.close()
+                }
+        } else {
+            imageProxy.close()
+        }
     }
 
     private fun fetchProductInfo(barcode: String) {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val snapshot = database.child("products").child(barcode).get().await()
-                if (snapshot.exists()) {
-                    val product = snapshot.getValue(Product::class.java)
-                    product?.let { displayProductInfo(it) }
+        db.collection("products")
+            .whereEqualTo("barcode", barcode)
+            .get()
+            .addOnSuccessListener { documents ->
+                if (!documents.isEmpty) {
+                    val product = documents.documents[0]
+                    val productName = product.getString("name") ?: "Unknown"
+                    val ingredients = product.getString("ingredients") ?: "Not specified"
+                    Toast.makeText(
+                        this,
+                        "Product: $productName\nIngredients: $ingredients",
+                        Toast.LENGTH_LONG
+                    ).show()
                 } else {
-                    runOnUiThread {
-                        Toast.makeText(this@MainActivity, R.string.product_not_found, Toast.LENGTH_SHORT).show()
-                        // Restart camera after product not found
-                        startCamera()
-                    }
-                }
-            } catch (e: Exception) {
-                runOnUiThread {
-                    Toast.makeText(this@MainActivity, R.string.fetch_error, Toast.LENGTH_SHORT).show()
-                    // Restart camera after error
-                    startCamera()
+                    Toast.makeText(this, "Product not found in database.", Toast.LENGTH_SHORT).show()
                 }
             }
-        }
-    }
-
-    private fun displayProductInfo(product: Product) {
-        runOnUiThread {
-            // Update product name
-            productName.text = product.name
-
-            // Update EcoScore
-            ecoScore.text = getString(R.string.eco_score, product.ecoScore)
-
-            // Update vegan status
-            if (product.isVegan) {
-                veganStatus.visibility = View.VISIBLE
-            } else {
-                veganStatus.visibility = View.GONE
+            .addOnFailureListener { exception ->
+                Log.e("MainActivity", "Error fetching product info", exception)
             }
-
-            // Update recyclability status
-            if (product.recyclability.isNotEmpty()) {
-                recyclableStatus.visibility = View.VISIBLE
-                recyclableStatus.text = getString(R.string.recyclable, product.recyclability)
-            } else {
-                recyclableStatus.visibility = View.GONE
-            }
-
-            // Update allergens
-            if (product.allergens.isNotEmpty()) {
-                allergens.text = getString(R.string.allergens, product.allergens.joinToString(", "))
-            } else {
-                allergens.text = getString(R.string.no_allergens)
-            }
-
-            // Update packaging info
-            packagingInfo.text = getString(R.string.packaging, product.packagingMaterial)
-
-            // Update brand sustainability
-            brandSustainability.text = getString(R.string.brand_sustainability, product.brandSustainability)
-
-            // Show suggest alternatives button
-            suggestAlternativesButton.visibility = View.VISIBLE
-        }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == CAMERA_PERMISSION_REQUEST) {
-            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                startCamera()
-            } else {
-                Toast.makeText(this, R.string.camera_permission_required, Toast.LENGTH_SHORT).show()
-            }
-        }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        barcodeScanner.close()
         cameraExecutor.shutdown()
     }
-}
 
-data class Product(
-    val barcode: String = "",
-    val name: String = "",
-    val ecoScore: Int = 0,
-    val allergens: List<String> = emptyList(),
-    val isVegan: Boolean = false,
-    val recyclability: String = "",
-    val packagingMaterial: String = "",
-    val brandSustainability: String = ""
-) 
+    // BarcodeAnalyzer as an inner class for clarity
+    private inner class BarcodeAnalyzer(
+        private val scanner: BarcodeScanner
+    ) : ImageAnalysis.Analyzer {
+        @ExperimentalGetImage
+        override fun analyze(imageProxy: ImageProxy) {
+            processImageProxy(scanner, imageProxy)
+        }
+    }
+}
