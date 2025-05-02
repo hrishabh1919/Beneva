@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var previewView: PreviewView
     private val db = FirebaseFirestore.getInstance()
     private var lastScannedCode: String? = null
+    private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,79 +43,83 @@ class MainActivity : AppCompatActivity() {
     private fun initializeDatabase() {
         val productsRef = db.collection("products")
         
-        // First, clear the existing collection to ensure clean state
+        // First, check if database is already populated
         productsRef.get()
             .addOnSuccessListener { documents ->
-                if (!documents.isEmpty) {
-                    Log.d("MainActivity", "Clearing existing database...")
-                    val batch = db.batch()
-                    documents.forEach { doc ->
-                        batch.delete(doc.reference)
-                    }
-                    batch.commit()
-                        .addOnSuccessListener {
-                            Log.d("MainActivity", "Database cleared successfully")
-                            populateDatabase()
-                        }
-                        .addOnFailureListener { e ->
-                            Log.e("MainActivity", "Error clearing database", e)
-                        }
-                } else {
+                if (documents.isEmpty) {
+                    Log.d(TAG, "Database is empty, populating...")
                     populateDatabase()
+                } else {
+                    Log.d(TAG, "Database already contains ${documents.size()} products")
+                    // Verify the database contents
+                    verifyDatabase()
                 }
             }
             .addOnFailureListener { e ->
-                Log.e("MainActivity", "Error checking database", e)
+                Log.e(TAG, "Error checking database", e)
+                Toast.makeText(this, "Error checking database. Please try again.", Toast.LENGTH_SHORT).show()
             }
     }
 
     private fun populateDatabase() {
         val productsRef = db.collection("products")
-        val jsonString = resources.openRawResource(R.raw.database)
-            .bufferedReader()
-            .use { it.readText() }
-        
-        val jsonArray = JSONArray(jsonString)
-        Log.d("MainActivity", "Loading ${jsonArray.length()} products from local database")
-        
-        // Use a batch write for better performance and atomicity
-        val batch = db.batch()
-        
-        for (i in 0 until jsonArray.length()) {
-            val product = jsonArray.getJSONObject(i)
-            val barcode = product.getString("barcode")
-            val name = product.getString("name")
+        try {
+            val jsonString = resources.openRawResource(R.raw.database)
+                .bufferedReader()
+                .use { it.readText() }
             
-            // Create a document reference with the barcode as the document ID
-            val docRef = productsRef.document(barcode)
-            batch.set(docRef, product.toMap())
+            val jsonArray = JSONArray(jsonString)
+            Log.d(TAG, "Loading ${jsonArray.length()} products from local database")
             
-            Log.d("MainActivity", "Preparing to add product: $name (Barcode: $barcode)")
+            // Use a batch write for better performance and atomicity
+            val batch = db.batch()
+            
+            for (i in 0 until jsonArray.length()) {
+                val product = jsonArray.getJSONObject(i)
+                val barcode = product.getString("barcode")
+                val name = product.getString("name")
+                
+                // Create a document reference with the barcode as the document ID
+                val docRef = productsRef.document(barcode)
+                batch.set(docRef, product.toMap())
+                
+                Log.d(TAG, "Preparing to add product: $name (Barcode: $barcode)")
+            }
+            
+            batch.commit()
+                .addOnSuccessListener {
+                    Log.d(TAG, "All products added successfully")
+                    Toast.makeText(this, "Database populated successfully", Toast.LENGTH_SHORT).show()
+                    verifyDatabase()
+                }
+                .addOnFailureListener { e ->
+                    Log.e(TAG, "Error adding products", e)
+                    Toast.makeText(this, "Error populating database. Please try again.", Toast.LENGTH_SHORT).show()
+                }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error reading database file", e)
+            Toast.makeText(this, "Error reading database file", Toast.LENGTH_SHORT).show()
         }
-        
-        batch.commit()
-            .addOnSuccessListener {
-                Log.d("MainActivity", "All products added successfully")
-                verifyDatabase()
-            }
-            .addOnFailureListener { e ->
-                Log.e("MainActivity", "Error adding products", e)
-            }
     }
 
     private fun verifyDatabase() {
         val productsRef = db.collection("products")
         productsRef.get()
             .addOnSuccessListener { documents ->
-                Log.d("MainActivity", "Database verification: Found ${documents.size()} products")
-                documents.forEach { doc ->
-                    val barcode = doc.getString("barcode")
-                    val name = doc.getString("name")
-                    Log.d("MainActivity", "Verified product: $name (Barcode: $barcode)")
+                Log.d(TAG, "Database verification: Found ${documents.size()} products")
+                if (documents.isEmpty) {
+                    Toast.makeText(this, "Database is empty. Please restart the app.", Toast.LENGTH_LONG).show()
+                } else {
+                    documents.forEach { doc ->
+                        val barcode = doc.getString("barcode")
+                        val name = doc.getString("name")
+                        Log.d(TAG, "Verified product: $name (Barcode: $barcode)")
+                    }
                 }
             }
             .addOnFailureListener { e ->
-                Log.e("MainActivity", "Error verifying database", e)
+                Log.e(TAG, "Error verifying database", e)
+                Toast.makeText(this, "Error verifying database", Toast.LENGTH_SHORT).show()
             }
     }
 
@@ -153,7 +158,7 @@ class MainActivity : AppCompatActivity() {
                     this, cameraSelector, preview, analyzer
                 )
             } catch (e: Exception) {
-                Log.e("MainActivity", "Use case binding failed", e)
+                Log.e(TAG, "Use case binding failed", e)
             }
 
         }, ContextCompat.getMainExecutor(this))
@@ -170,14 +175,14 @@ class MainActivity : AppCompatActivity() {
                         val rawValue = barcode.rawValue?.trim()
                         if (!rawValue.isNullOrEmpty() && rawValue != lastScannedCode) {
                             lastScannedCode = rawValue
-                            Log.d("MainActivity", "Barcode detected: $rawValue")
+                            Log.d(TAG, "Barcode detected: $rawValue")
                             Toast.makeText(this, "Scanning barcode: $rawValue", Toast.LENGTH_SHORT).show()
                             fetchProductInfo(rawValue)
                         }
                     }
                 }
                 .addOnFailureListener {
-                    Log.e("MainActivity", "Barcode scanning failed", it)
+                    Log.e(TAG, "Barcode scanning failed", it)
                     Toast.makeText(this, "Failed to scan barcode. Please try again.", Toast.LENGTH_SHORT).show()
                 }
                 .addOnCompleteListener {
@@ -190,39 +195,54 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchProductInfo(barcode: String) {
         val sanitizedBarcode = barcode.trim()
-        Log.d("MainActivity", "Searching for barcode: '$sanitizedBarcode'")
+        Log.d(TAG, "Searching for barcode: '$sanitizedBarcode'")
         
-        // Query using document ID (barcode) instead of whereEqualTo
+        // First verify the database is populated
         db.collection("products")
-            .document(sanitizedBarcode)
             .get()
-            .addOnSuccessListener { document ->
-                if (document.exists()) {
-                    val productName = document.getString("name") ?: "Unknown"
-                    val ingredients = document.get("ingredients")?.let {
-                        when (it) {
-                            is List<*> -> it.joinToString(", ")
-                            else -> it.toString()
-                        }
-                    } ?: "Not specified"
-                    val ecoScore = document.getLong("eco_score") ?: 0
-                    
-                    val message = """
-                        Product: $productName
-                        Ingredients: $ingredients
-                        EcoScore: $ecoScore
-                    """.trimIndent()
-                    
-                    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-                    Log.d("MainActivity", "Product found: $productName")
-                } else {
-                    Log.d("MainActivity", "No product found for barcode: $sanitizedBarcode")
-                    Toast.makeText(this, "Product not found in database.", Toast.LENGTH_SHORT).show()
+            .addOnSuccessListener { documents ->
+                if (documents.isEmpty) {
+                    Log.e(TAG, "Database is empty")
+                    Toast.makeText(this, "Database is empty. Please restart the app.", Toast.LENGTH_LONG).show()
+                    return@addOnSuccessListener
                 }
+
+                // Now query for the specific product
+                db.collection("products")
+                    .document(sanitizedBarcode)
+                    .get()
+                    .addOnSuccessListener { document ->
+                        if (document.exists()) {
+                            val productName = document.getString("name") ?: "Unknown"
+                            val ingredients = document.get("ingredients")?.let {
+                                when (it) {
+                                    is List<*> -> it.joinToString(", ")
+                                    else -> it.toString()
+                                }
+                            } ?: "Not specified"
+                            val ecoScore = document.getLong("eco_score") ?: 0
+                            
+                            val message = """
+                                Product: $productName
+                                Ingredients: $ingredients
+                                EcoScore: $ecoScore
+                            """.trimIndent()
+                            
+                            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+                            Log.d(TAG, "Product found: $productName")
+                        } else {
+                            Log.d(TAG, "No product found for barcode: $sanitizedBarcode")
+                            Toast.makeText(this, "Product not found in database.", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.e(TAG, "Error fetching product info", exception)
+                        Toast.makeText(this, "Error fetching product info. Please try again.", Toast.LENGTH_SHORT).show()
+                    }
             }
-            .addOnFailureListener { exception ->
-                Log.e("MainActivity", "Error fetching product info", exception)
-                Toast.makeText(this, "Error fetching product info. Please try again.", Toast.LENGTH_SHORT).show()
+            .addOnFailureListener { e ->
+                Log.e(TAG, "Error checking database", e)
+                Toast.makeText(this, "Error checking database. Please try again.", Toast.LENGTH_SHORT).show()
             }
     }
 
