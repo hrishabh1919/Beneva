@@ -48,6 +48,13 @@ class MainActivity : AppCompatActivity() {
         signOutButton.setOnClickListener {
             signOut() // Call your function here
         }
+
+        val profileButton: Button = findViewById(R.id.profileButton)
+        profileButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun startCamera() {

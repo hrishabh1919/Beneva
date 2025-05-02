@@ -132,23 +132,35 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/alternatives_coming_soon"
                 android:visibility="gone" />
-
         </LinearLayout>
-
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Sign Out Button -->
+    <!-- Sign Out and Profile Buttons in Horizontal Chain -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signOutButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:text="Sign Out"
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/holo_red_dark"
         app:cornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profileButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_margin="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/profileButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/purple_500"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/signOutButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_margin="8dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

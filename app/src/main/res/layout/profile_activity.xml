@@ -1,6 +1,289 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F1F8E9"
+    android:padding="0dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Form Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_form_card"
+            android:padding="24dp"
+            android:elevation="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Demographic Information"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#212121"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="18dp"/>
+
+            <!-- Section: Basic Information -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic Information"
+                android:textStyle="bold"
+                android:textColor="#4caf50"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Full Name"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/dobInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Date of Birth (DD/MM/YYYY)"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:inputType="date"
+                android:layout_marginBottom="10dp"/>
+
+            <Spinner
+                android:id="@+id/genderSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/locationInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Location (City, Country)"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/ethnicityInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Ethnicity"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Section: Dietary Preferences -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dietary Preferences"
+                android:textStyle="bold"
+                android:textColor="#4caf50"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"/>
+
+            <Spinner
+                android:id="@+id/dietSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/favoriteFoodsInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Favorite Foods"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/dislikedFoodsInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Disliked Foods"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Section: Allergens -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allergens (Select all that apply)"
+                android:textStyle="bold"
+                android:textColor="#4caf50"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+                <CheckBox
+                    android:id="@+id/allergenPeanuts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peanuts"
+                    android:textColor="#212121"/>
+                <CheckBox
+                    android:id="@+id/allergenDairy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dairy"
+                    android:textColor="#212121"/>
+                <CheckBox
+                    android:id="@+id/allergenGluten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gluten"
+                    android:textColor="#212121"/>
+                <CheckBox
+                    android:id="@+id/allergenShellfish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shellfish"
+                    android:textColor="#212121"/>
+                <CheckBox
+                    android:id="@+id/allergenEggs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eggs"
+                    android:textColor="#212121"/>
+                <CheckBox
+                    android:id="@+id/allergenSoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soy"
+                    android:textColor="#212121"/>
+                <CheckBox
+                    android:id="@+id/allergenNone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="None"
+                    android:textColor="#212121"/>
+            </LinearLayout>
+
+            <!-- Section: Medications -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Medications"
+                android:textStyle="bold"
+                android:textColor="#4caf50"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/medicationsInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="List your medications"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Section: Medical Conditions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medical Conditions"
+                android:textStyle="bold"
+                android:textColor="#4caf50"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/medicalConditionsInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Describe any relevant conditions"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Section: Emergency Contact -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Contact"
+                android:textStyle="bold"
+                android:textColor="#4caf50"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/emergencyContactName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Contact Name"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+            <EditText
+                android:id="@+id/emergencyContactPhone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Phone Number"
+                android:background="@drawable/bg_edittext"
+                android:paddingStart="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:inputType="phone"
+                android:layout_marginBottom="18dp"/>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="Save"
+                android:backgroundTint="#4caf50"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_button_rounded"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
