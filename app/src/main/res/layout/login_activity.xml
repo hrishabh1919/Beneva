@@ -155,7 +155,7 @@
             android:id="@+id/google_button"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="@string/sign_"
+            android:text="@string/sign_in_with_google"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:backgroundTint="#4caf50"
