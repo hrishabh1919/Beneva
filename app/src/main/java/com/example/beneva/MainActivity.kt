@@ -14,6 +14,8 @@ import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage
 import com.google.firebase.firestore.FirebaseFirestore
+import org.json.JSONArray
+import org.json.JSONObject
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -31,7 +33,89 @@ class MainActivity : AppCompatActivity() {
         previewView = findViewById(R.id.cameraPreview)
         cameraExecutor = Executors.newSingleThreadExecutor()
 
+        // Initialize Firebase database with local data
+        initializeDatabase()
+
         startCamera()
+    }
+
+    private fun initializeDatabase() {
+        val productsRef = db.collection("products")
+        
+        // First, clear the existing collection to ensure clean state
+        productsRef.get()
+            .addOnSuccessListener { documents ->
+                if (!documents.isEmpty) {
+                    Log.d("MainActivity", "Clearing existing database...")
+                    val batch = db.batch()
+                    documents.forEach { doc ->
+                        batch.delete(doc.reference)
+                    }
+                    batch.commit()
+                        .addOnSuccessListener {
+                            Log.d("MainActivity", "Database cleared successfully")
+                            populateDatabase()
+                        }
+                        .addOnFailureListener { e ->
+                            Log.e("MainActivity", "Error clearing database", e)
+                        }
+                } else {
+                    populateDatabase()
+                }
+            }
+            .addOnFailureListener { e ->
+                Log.e("MainActivity", "Error checking database", e)
+            }
+    }
+
+    private fun populateDatabase() {
+        val productsRef = db.collection("products")
+        val jsonString = resources.openRawResource(R.raw.database)
+            .bufferedReader()
+            .use { it.readText() }
+        
+        val jsonArray = JSONArray(jsonString)
+        Log.d("MainActivity", "Loading ${jsonArray.length()} products from local database")
+        
+        // Use a batch write for better performance and atomicity
+        val batch = db.batch()
+        
+        for (i in 0 until jsonArray.length()) {
+            val product = jsonArray.getJSONObject(i)
+            val barcode = product.getString("barcode")
+            val name = product.getString("name")
+            
+            // Create a document reference with the barcode as the document ID
+            val docRef = productsRef.document(barcode)
+            batch.set(docRef, product.toMap())
+            
+            Log.d("MainActivity", "Preparing to add product: $name (Barcode: $barcode)")
+        }
+        
+        batch.commit()
+            .addOnSuccessListener {
+                Log.d("MainActivity", "All products added successfully")
+                verifyDatabase()
+            }
+            .addOnFailureListener { e ->
+                Log.e("MainActivity", "Error adding products", e)
+            }
+    }
+
+    private fun verifyDatabase() {
+        val productsRef = db.collection("products")
+        productsRef.get()
+            .addOnSuccessListener { documents ->
+                Log.d("MainActivity", "Database verification: Found ${documents.size()} products")
+                documents.forEach { doc ->
+                    val barcode = doc.getString("barcode")
+                    val name = doc.getString("name")
+                    Log.d("MainActivity", "Verified product: $name (Barcode: $barcode)")
+                }
+            }
+            .addOnFailureListener { e ->
+                Log.e("MainActivity", "Error verifying database", e)
+            }
     }
 
     private fun startCamera() {
@@ -87,12 +171,14 @@ class MainActivity : AppCompatActivity() {
                         if (!rawValue.isNullOrEmpty() && rawValue != lastScannedCode) {
                             lastScannedCode = rawValue
                             Log.d("MainActivity", "Barcode detected: $rawValue")
+                            Toast.makeText(this, "Scanning barcode: $rawValue", Toast.LENGTH_SHORT).show()
                             fetchProductInfo(rawValue)
                         }
                     }
                 }
                 .addOnFailureListener {
                     Log.e("MainActivity", "Barcode scanning failed", it)
+                    Toast.makeText(this, "Failed to scan barcode. Please try again.", Toast.LENGTH_SHORT).show()
                 }
                 .addOnCompleteListener {
                     imageProxy.close()
@@ -104,30 +190,39 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchProductInfo(barcode: String) {
         val sanitizedBarcode = barcode.trim()
+        Log.d("MainActivity", "Searching for barcode: '$sanitizedBarcode'")
+        
+        // Query using document ID (barcode) instead of whereEqualTo
         db.collection("products")
-            .whereEqualTo("barcode", sanitizedBarcode)
+            .document(sanitizedBarcode)
             .get()
-            .addOnSuccessListener { documents ->
-                if (!documents.isEmpty) {
-                    val product = documents.documents[0]
-                    val productName = product.getString("name") ?: "Unknown"
-                    val ingredients = product.get("ingredients")?.let {
+            .addOnSuccessListener { document ->
+                if (document.exists()) {
+                    val productName = document.getString("name") ?: "Unknown"
+                    val ingredients = document.get("ingredients")?.let {
                         when (it) {
                             is List<*> -> it.joinToString(", ")
                             else -> it.toString()
                         }
                     } ?: "Not specified"
-                    Toast.makeText(
-                        this,
-                        "Product: $productName\nIngredients: $ingredients",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    val ecoScore = document.getLong("eco_score") ?: 0
+                    
+                    val message = """
+                        Product: $productName
+                        Ingredients: $ingredients
+                        EcoScore: $ecoScore
+                    """.trimIndent()
+                    
+                    Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+                    Log.d("MainActivity", "Product found: $productName")
                 } else {
+                    Log.d("MainActivity", "No product found for barcode: $sanitizedBarcode")
                     Toast.makeText(this, "Product not found in database.", Toast.LENGTH_SHORT).show()
                 }
             }
             .addOnFailureListener { exception ->
                 Log.e("MainActivity", "Error fetching product info", exception)
+                Toast.makeText(this, "Error fetching product info. Please try again.", Toast.LENGTH_SHORT).show()
             }
     }
 
@@ -143,5 +238,33 @@ class MainActivity : AppCompatActivity() {
         override fun analyze(imageProxy: ImageProxy) {
             processImageProxy(scanner, imageProxy)
         }
+    }
+
+    private fun JSONObject.toMap(): Map<String, Any> {
+        val map = mutableMapOf<String, Any>()
+        val keys = this.keys()
+        while (keys.hasNext()) {
+            val key = keys.next()
+            val value = this.get(key)
+            map[key] = when (value) {
+                is JSONArray -> value.toList()
+                is JSONObject -> value.toMap()
+                else -> value
+            }
+        }
+        return map
+    }
+
+    private fun JSONArray.toList(): List<Any> {
+        val list = mutableListOf<Any>()
+        for (i in 0 until this.length()) {
+            val value = this.get(i)
+            list.add(when (value) {
+                is JSONArray -> value.toList()
+                is JSONObject -> value.toMap()
+                else -> value
+            })
+        }
+        return list
     }
 }
