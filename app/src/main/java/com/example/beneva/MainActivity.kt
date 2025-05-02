@@ -23,6 +23,7 @@ import java.util.concurrent.Executors
 import androidx.annotation.OptIn
 import android.os.CancellationSignal
 import android.os.OutcomeReceiver
+import android.widget.Button
 import androidx.credentials.CredentialManagerCallback
 import androidx.credentials.exceptions.ClearCredentialException
 
@@ -156,7 +157,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun signOut() {
-        FirebaseAuth.getInstance().signOut()
+
+        val signOutButton = findViewById<Button>(R.id.signOutButton)
+        signOutButton.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+        }
 
         val credentialManager = CredentialManager.create(this)
         val clearRequest = ClearCredentialStateRequest()
