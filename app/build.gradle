@@ -50,7 +50,9 @@ dependencies {
     
     // ML Kit for barcode scanning
     implementation libs.barcode.scanning
-    
+    implementation libs.barcode.scanning.v1730
+
+
     // Firebase
     implementation platform(libs.firebase.bom)
     implementation libs.firebase.analytics.ktx

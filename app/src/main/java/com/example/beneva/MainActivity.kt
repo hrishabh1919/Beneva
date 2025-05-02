@@ -8,7 +8,9 @@ import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
+import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.barcode.BarcodeScanner
+import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage
 import com.google.firebase.firestore.FirebaseFirestore
@@ -42,7 +44,13 @@ class MainActivity : AppCompatActivity() {
                 it.setSurfaceProvider(previewView.surfaceProvider)
             }
 
-            val barcodeScanner: BarcodeScanner = BarcodeScanning.getClient()
+            val options = BarcodeScannerOptions.Builder()
+                .setBarcodeFormats(
+                    Barcode.FORMAT_ALL_FORMATS
+                )
+                .build()
+            val barcodeScanner: BarcodeScanner = BarcodeScanning.getClient(options)
+
             val analyzer = ImageAnalysis.Builder()
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                 .build()
@@ -75,8 +83,8 @@ class MainActivity : AppCompatActivity() {
             scanner.process(image)
                 .addOnSuccessListener { barcodes ->
                     for (barcode in barcodes) {
-                        val rawValue = barcode.rawValue
-                        if (rawValue != null && rawValue != lastScannedCode) {
+                        val rawValue = barcode.rawValue?.trim()
+                        if (!rawValue.isNullOrEmpty() && rawValue != lastScannedCode) {
                             lastScannedCode = rawValue
                             Log.d("MainActivity", "Barcode detected: $rawValue")
                             fetchProductInfo(rawValue)
@@ -95,14 +103,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fetchProductInfo(barcode: String) {
+        val sanitizedBarcode = barcode.trim()
         db.collection("products")
-            .whereEqualTo("barcode", barcode)
+            .whereEqualTo("barcode", sanitizedBarcode)
             .get()
             .addOnSuccessListener { documents ->
                 if (!documents.isEmpty) {
                     val product = documents.documents[0]
                     val productName = product.getString("name") ?: "Unknown"
-                    val ingredients = product.getString("ingredients") ?: "Not specified"
+                    val ingredients = product.get("ingredients")?.let {
+                        when (it) {
+                            is List<*> -> it.joinToString(", ")
+                            else -> it.toString()
+                        }
+                    } ?: "Not specified"
                     Toast.makeText(
                         this,
                         "Product: $productName\nIngredients: $ingredients",
@@ -122,7 +136,6 @@ class MainActivity : AppCompatActivity() {
         cameraExecutor.shutdown()
     }
 
-    // BarcodeAnalyzer as an inner class for clarity
     private inner class BarcodeAnalyzer(
         private val scanner: BarcodeScanner
     ) : ImageAnalysis.Analyzer {
