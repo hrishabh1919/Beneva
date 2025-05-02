@@ -43,6 +43,11 @@ class MainActivity : AppCompatActivity() {
         cameraExecutor = Executors.newSingleThreadExecutor()
 
         startCamera()
+
+        val signOutButton = findViewById<Button>(R.id.signOutButton)
+        signOutButton.setOnClickListener {
+            signOut() // Call your function here
+        }
     }
 
     private fun startCamera() {
@@ -157,11 +162,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun signOut() {
-
-        val signOutButton = findViewById<Button>(R.id.signOutButton)
-        signOutButton.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-        }
+        FirebaseAuth.getInstance().signOut()
 
         val credentialManager = CredentialManager.create(this)
         val clearRequest = ClearCredentialStateRequest()
