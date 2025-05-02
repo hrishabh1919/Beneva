@@ -5,11 +5,12 @@ buildscript {
     }
     dependencies {
         classpath libs.gradle
-        classpath libs.kotlin.gradle.plugin
+        classpath libs.kotlin.gradle.plugin.v190
         classpath libs.google.services
+
     }
 }
 
 tasks.register('clean', Delete) {
-    delete layout.buildDirectory
-} 
+    delete rootProject.layout.buildDirectory
+}

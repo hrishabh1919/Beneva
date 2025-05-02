@@ -24,55 +24,58 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
+
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
+
     buildFeatures {
         viewBinding true
     }
 }
 
 dependencies {
+    // AndroidX and Material core
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material
     implementation libs.androidx.constraintlayout
-    
+    implementation libs.androidx.navigation.compose
+
     // CameraX
     implementation libs.androidx.camera.core
     implementation libs.androidx.camera.camera2
     implementation libs.androidx.camera.lifecycle
     implementation libs.androidx.camera.view
-    
-    // ML Kit for barcode scanning
-    implementation libs.barcode.scanning
-    implementation libs.barcode.scanning.v1730
-
 
     // Firebase
-    implementation platform(libs.firebase.bom)
-    implementation libs.firebase.analytics.ktx
-    implementation libs.firebase.database.ktx
     implementation libs.firebase.auth.ktx
+    implementation libs.firebase.firestore.ktx
+    implementation libs.firebase.database.ktx
+    implementation(libs.firebase.auth)
 
-    // Coroutines
-    implementation libs.kotlinx.coroutines.android
-    implementation libs.kotlinx.coroutines.play.services
+    // Barcode scanning
+    implementation libs.barcode.scanning
+
+    // Credential Manager and Google ID
+    implementation libs.androidx.credentials
+    implementation libs.androidx.credentials.play.services.auth
     implementation libs.googleid
 
+    // Play Services Auth (optional, for legacy support)
+    implementation(libs.play.services.auth)
+
+    // Testing
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
+    implementation libs.guava
 
-    implementation libs.barcode.scanning.v1730
-    implementation libs.androidx.camera.core.v110
-    implementation libs.androidx.camera.camera2.v110
-    implementation libs.androidx.camera.lifecycle.v110
-    implementation libs.androidx.camera.view.v100alpha31
-    implementation libs.firebase.firestore
-    implementation libs.firebase.auth
 }
+
+apply plugin: 'com.google.gms.google-services'

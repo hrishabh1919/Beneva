@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Beneva</string>
-    <string name="beneva">BENEVA</string>
+    <string name="beneva">Beneva</string>
     <string name="empowering_nconscious_choices">Empowering\nConscious choices</string>
     
     <!-- Camera related -->
@@ -14,7 +14,7 @@
     <!-- Product info -->
     <string name="product_not_found">Product not found</string>
     <string name="fetch_error">Error fetching product info</string>
-    <string name="eco_score">🟢 EcoScore: %1$d</string>
+    <string name="eco_score">🟢 EcoScore: %1$s</string>
     <string name="recyclable">✅ %1$s</string>
     <string name="allergens">⚠️ Allergens: %1$s</string>
     <string name="no_allergens">✅ No common allergens detected</string>
@@ -24,11 +24,11 @@
     <!-- Alternatives -->
     <string name="alternatives_coming_soon">Alternative suggestions coming soon!</string>
     <string name="enter">Enter</string>
-    <string name="password">***</string>
-    <string name="admin_email_com">admin@email.com</string>
-    <string name="login_password">***</string>
+    <string name="password">Password</string>
+    <string name="user_email_com">user@email.com</string>
+    <string name="login_password">Password</string>
     <string name="login">Login</string>
-    <string name="email_icon">email_icon</string>
+    <string name="email_icon">Email icon</string>
 
     <string name="scanning_for_barcodes">Scanning for barcodes…</string>
     <string name="barcode_detected">Barcode detected: %1$s</string>
@@ -47,11 +47,36 @@
     <string name="suggest_alternatives">Suggest Alternatives</string>
     <string name="default_web_client_id">955645976333-oeleoqgtd9jggdembg9bfc6h8a72b14c.apps.googleusercontent.com</string>
     <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="register">Register</string>
 
     <!-- Error Screen -->
     <string name="oops">Oops!</string>
     <string name="invalid_place">Invalid Place</string>
     <string name="error_message">Sorry, we couldn\'t find what you\'re looking for.</string>
     <string name="take_me_back">Take Me Back</string>
+
+    <string name="the_hazelnut_factory">The Hazelnut Factory</string>
+    <string name="test_text_here">Test text here</string>
+    <string name="bottom_image_desc">bottom_image_desc</string>
+
+    <!-- res/values/strings.xml -->
+    <string name="ecoscore_label">EcoScore: %1$s</string>
+    <string name="allergens_label">Allergens: %1$s</string>
+    <string name="allergens_none">Allergens: None</string>
+    <string name="packaging_label">Packaging: %1$s</string>
+    <string name="packaging_not_available">Packaging: Information not available</string>
+    <string name="brand_sustainability_label">Brand Sustainability: %1$s</string>
+    <string name="brand_sustainability_not_available">Brand Sustainability: Information not available</string>
+
+    <!-- main activity string reference -->
+    <string name="product_database_not_loaded">Product database not loaded</string>
+    <string name="error_loading_products_database">Error loading products database</string>
+    <string name="error_displaying_product_info">Error displaying product information</string>
+    <string name="camera_not_available">Camera is not available</string>
+    <string name="error_setting_up_camera">Error setting up camera. Please restart the app.</string>
+    <string name="error_binding_camera">Error binding camera. Please restart the app.</string>
+    <string name="error_starting_camera">Error starting camera. Please restart the app.</string>
+
+
 
 </resources>

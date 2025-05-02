@@ -1,168 +1,142 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f1f8e9">
+    android:background="@color/light_green">
 
-    <!-- Top Green Curved Background -->
-    <RelativeLayout
-        android:id="@+id/top_section"
+    <!-- Top-left circle -->
+    <View
+        android:layout_width="393dp"
+        android:layout_height="313dp"
+        android:layout_gravity="top|start"
+        android:background="@drawable/top_left_circle"
+        android:translationX="-100dp"
+        android:translationY="-100dp"
+        tools:ignore="VisualLintBounds" />
+
+    <!-- Login Card -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:background="#5CC35E"
-        android:clipToOutline="true"
-        tools:targetApi="31">
-        <!-- You may use a custom drawable for the curved effect or use a vector/shape background -->
+        android:layout_height="520dp"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="0dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@android:color/transparent">
 
-        <!-- App Name and Tagline -->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="24dp"
-            tools:ignore="UselessParent">
+            android:padding="24dp">
 
+            <!-- Login Title -->
             <TextView
-                android:id="@+id/app_name"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/beneva"
-                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/login"
+                android:textColor="@color/green"
                 android:textSize="28sp"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
+                android:textStyle="bold" />
+
+            <!-- Email Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:startIconDrawable="@drawable/ic_email"
+                app:startIconTint="@color/green"
+                app:boxBackgroundMode="filled"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/green"
+                app:hintTextColor="@color/green"
+                app:boxCornerRadiusTopStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusBottomEnd="24dp"
+                android:hint="@string/user_email_com">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/green"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Password Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@color/green"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/green"
+                app:hintTextColor="@color/green"
+                app:boxStrokeColor="@color/green"
+                app:boxBackgroundMode="filled"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusTopStart="24dp"
+                app:boxCornerRadiusTopEnd="24dp"
+                app:boxCornerRadiusBottomStart="24dp"
+                app:boxCornerRadiusBottomEnd="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/green" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Enter Button -->
+
+            <!-- Google Sign-In Button -->
+            <Button
+                android:id="@+id/animatedButton"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/green"
+                android:stateListAnimator="@animator/scale_button_press"
+                android:text="@string/enter"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/googleSignInButton"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp" />
+
+            <!-- Logo/Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/bottomImage"
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/bottom_image_desc"
+                android:elevation="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_logo"
+                app:shapeAppearanceOverlay="@style/RoundedCornerImageStyle" />
 
         </LinearLayout>
-
-    </RelativeLayout>
-
-    <!-- White Card for Login Form -->
-    <LinearLayout
-        android:id="@+id/login_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/top_section"
-        android:orientation="vertical"
-        android:background="#FFFFFF"
-        android:padding="32dp"
-        android:layout_marginTop="-80dp"
-        android:layout_marginBottom="0dp"
-        android:elevation="8dp"
-        android:clipToOutline="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        tools:targetApi="31">
-
-        <!-- Login Title -->
-        <TextView
-            android:id="@+id/login_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textColor="#212121"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:layout_marginBottom="24dp" />
-
-        <!-- Email Field -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:orientation="horizontal"
-            android:background="@drawable/rounded_edittext_bg"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/email_icon"
-                android:src="@drawable/ic_email"
-                app:tint="#212121" />
-
-            <EditText
-                android:id="@+id/email_field"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:autofillHints=""
-                android:background="@android:color/transparent"
-                android:hint="@string/admin_email_com"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:textColor="#212121"
-                android:textSize="16sp"
-                tools:ignore="VisualLintTextFieldSize" />
-        </LinearLayout>
-
-        <!-- Password Field -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:orientation="horizontal"
-            android:background="@drawable/rounded_edittext_bg"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="24dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
-
-            <ImageView
-                android:layout_height="wrap_content"
-                android:layout_width="35dp"
-                android:contentDescription="@string/password"
-                android:src="@drawable/ic_lock"
-                app:tint="#212121" />
-
-            <EditText
-                android:id="@+id/password_field"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:autofillHints=""
-                android:background="@android:color/transparent"
-                android:hint="@string/login_password"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:textColor="#212121"
-                android:textSize="16sp"
-                tools:ignore="VisualLintTextFieldSize,DuplicateSpeakableTextCheck" />
-        </LinearLayout>
-
-        <!-- Enter Button -->
-        <Button
-            android:id="@+id/enter_button"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="@string/enter"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:backgroundTint="#4caf50"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/rounded_button_bg"
-            tools:ignore="VisualLintButtonSize" />
-
-        <Button
-            android:id="@+id/google_button"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="@string/sign_in_with_google"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:backgroundTint="#4caf50"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/rounded_button_bg"
-            tools:ignore="VisualLintButtonSize" />
-
-    </LinearLayout>
-</RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
