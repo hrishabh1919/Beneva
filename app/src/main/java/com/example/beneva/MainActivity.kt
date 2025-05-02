@@ -1,5 +1,8 @@
+@file:Suppress("UNREACHABLE_CODE")
+
 package com.example.beneva
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -8,14 +11,23 @@ import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
-import com.google.mlkit.vision.barcode.common.Barcode
+import androidx.credentials.ClearCredentialStateRequest
+import androidx.credentials.CredentialManager
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.mlkit.vision.barcode.BarcodeScanner
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
+import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
-import com.google.firebase.firestore.FirebaseFirestore
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import androidx.annotation.OptIn
+import android.os.CancellationSignal
+import android.os.OutcomeReceiver
+import androidx.credentials.CredentialManagerCallback
+import androidx.credentials.exceptions.ClearCredentialException
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -75,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         }, ContextCompat.getMainExecutor(this))
     }
 
-    @ExperimentalGetImage
+    @OptIn(ExperimentalGetImage::class)
     private fun processImageProxy(scanner: BarcodeScanner, imageProxy: ImageProxy) {
         val mediaImage = imageProxy.image
         if (mediaImage != null) {
@@ -139,9 +151,37 @@ class MainActivity : AppCompatActivity() {
     private inner class BarcodeAnalyzer(
         private val scanner: BarcodeScanner
     ) : ImageAnalysis.Analyzer {
-        @ExperimentalGetImage
+        @OptIn(ExperimentalGetImage::class)
         override fun analyze(imageProxy: ImageProxy) {
             processImageProxy(scanner, imageProxy)
         }
     }
+
+    private fun signOut() {
+        FirebaseAuth.getInstance().signOut()
+
+        val credentialManager = CredentialManager.create(this)
+        val clearRequest = ClearCredentialStateRequest()
+
+        credentialManager.clearCredentialStateAsync(
+            clearRequest,
+            null,
+            ContextCompat.getMainExecutor(this),
+            object : CredentialManagerCallback<Void?, ClearCredentialException> {
+                override fun onResult(result: Void?) {
+                    Log.d("MainActivity", "Credential state cleared.")
+                }
+
+                override fun onError(e: ClearCredentialException) {
+                    Log.e("MainActivity", "Failed to clear credential state.", e)
+                }
+            }
+        )
+
+        val intent = Intent(this@MainActivity, LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
+    }
+
 }
