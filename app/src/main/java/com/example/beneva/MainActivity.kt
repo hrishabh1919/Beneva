@@ -1,8 +1,5 @@
-@file:Suppress("UNREACHABLE_CODE")
-
 package com.example.beneva
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -87,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         }, ContextCompat.getMainExecutor(this))
     }
 
-    @OptIn(ExperimentalGetImage::class)
+    @ExperimentalGetImage
     private fun processImageProxy(scanner: BarcodeScanner, imageProxy: ImageProxy) {
         val mediaImage = imageProxy.image
         if (mediaImage != null) {
@@ -151,7 +148,7 @@ class MainActivity : AppCompatActivity() {
     private inner class BarcodeAnalyzer(
         private val scanner: BarcodeScanner
     ) : ImageAnalysis.Analyzer {
-        @OptIn(ExperimentalGetImage::class)
+        @ExperimentalGetImage
         override fun analyze(imageProxy: ImageProxy) {
             processImageProxy(scanner, imageProxy)
         }
