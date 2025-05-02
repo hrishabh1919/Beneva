@@ -45,4 +45,7 @@
     <string name="vegan">🌱 Vegan</string>
     <string name="ecoscore_0">🟢 EcoScore: 0</string>
     <string name="suggest_alternatives">Suggest Alternatives</string>
+    <string name="default_web_client_id">955645976333-7190dl92rdhj4106ded6ifboum3537tc.apps.googleusercontent.com</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+
 </resources>
